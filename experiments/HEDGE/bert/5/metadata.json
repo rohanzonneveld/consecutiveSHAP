@@ -1,0 +1,27 @@
+{
+    "time": "2024-05-27 14:21",
+    "label": "1",
+    "prediction": "0.9991656541824341",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8995117470622063",
+    "mobius sum": "0.9485707972198725",
+    "sentence": "brilliant and moving performances by tom courtenay and peter finch. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 5,
+    "input sentence": "brilliant and moving performances by tom courtenay and peter finch. ",
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ]
+}

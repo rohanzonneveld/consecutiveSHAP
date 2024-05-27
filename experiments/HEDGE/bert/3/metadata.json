@@ -1,0 +1,21 @@
+{
+    "time": "2024-05-27 14:19",
+    "label": "0",
+    "prediction": "0.006656588055193424",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.8837937116622925",
+    "mobius sum": "-0.020635883323848248",
+    "sentence": "i hope this group of film-makers never re-unites. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 3,
+    "input sentence": "i hope this group of film-makers never re-unites. ",
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}

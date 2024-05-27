@@ -1,0 +1,14 @@
+{
+    "time": "2024-05-24 16:16",
+    "label": "1",
+    "prediction": "0.9989500641822815",
+    "baseline model": "0.8657205700874329",
+    "baseline game": "0.7514715492725372",
+    "mobius sum": "1.113199147861451",
+    "sentence": "this is a great movie. too bad it is not available on home video. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 6,
+    "input sentence": "this is a great movie. too bad it is not available on home video. "
+}

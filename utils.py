@@ -1,341 +1,36 @@
 from timeshap.explainer.kernel import TimeShapKernel
-from typing import Callable, List, Union
 import numpy as np
 import pandas as pd
-import copy
-import logging
+import os
+from sklearn.linear_model import Lasso, Ridge, LinearRegression
+from scipy.linalg import cholesky, cho_solve
+from scipy.special import comb
 import itertools
-import scipy as sp
+import tqdm
+import time
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error
+from copy import deepcopy
+from itertools import combinations
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
-from timeshap.utils.timeshap_legacy import time_shap_match_instance_to_data
-from shap.utils._legacy import convert_to_instance
-from scipy.special import binom
-
-import warnings
-
-import sklearn
-from packaging import version
-from sklearn.linear_model import Lasso, LassoLarsIC, lars_path, Ridge, LinearRegression
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
-
-log = logging.getLogger('shap')
-
-
-
-log = logging.getLogger('shap')
-
-
-
-class ConsecutiveKernel(TimeShapKernel):
-    def __init__(self, model, background, rs, mode, maxOrder=1):
-        super().__init__(model, background, rs, mode)
-        self.maxOrder = maxOrder
+class ConsecutiveMobiusKernel(TimeShapKernel):
+    def __init__(self, model, background, rs, output_path=None):
+        super().__init__(model, background, rs, "event")
+        self.output_path = output_path
     
-    def shap_values(self, X, pruning_idx=None, **kwargs):
-        assert isinstance(X, np.ndarray), "Instance must be 3D numpy array"
-        if self.mode == "pruning":
-            assert pruning_idx is not None
-        else:
-            assert pruning_idx < X.shape[1], "Pruning idx must be smaller than the sequence length. If not all events are pruned"
-        assert pruning_idx % 1 == 0, "Pruning idx must be integer"
-        self.pruning_idx = int(pruning_idx)
+    def solve(self, fraction_evaluated, dim):
 
-        self.set_variables_up(X)
+        self.n_terms = np.sum(np.arange(self.M, 0, -1)) 
 
-        if sp.sparse.issparse(X) and not sp.sparse.isspmatrix_lil(X):
-            X = X.tolil()
+        X = np.zeros((self.maskMatrix.shape[0]+1, self.n_terms), dtype='float32')
+        X[:-1, :], terms = self._find_consecutive_interactions(self.maskMatrix)
+        X[-1, :] = 1
 
-        # single instance
-        if X.shape[0] == 1:
-            # calculate mobius transform for all (consecutive) terms
-            m = self.mobius_transform(X, **kwargs) 
-            sizes=[0]
-            for i in range(1,self.maxOrder+1):
-                sizes = np.hstack((sizes, np.ones(self.M) * i))
+        y = np.hstack([self.linkfv(self.ey[:, dim]) - self.link.f(self.fnull[dim]), self.link.f(self.fx[dim]) - self.link.f(self.fnull[dim])])
+        W = np.hstack([np.ones(self.maskMatrix.shape[0]), np.array([1e6])]) 
 
-            # calculate shapley value from mobius transform
-            phi = np.zeros(self.M)
-            for i in range(self.M): # TODO: pruned events?
-                # find all mobius transforms that contain feature i, weighted sum is shapley value
-                S = np.zeros(self.M)
-                
-                # TODO: find all elements of m where i is present
-                # we want to find all sets where i is present in the coalition, so we create a mask with features present
-                # begin = 0 if i < self.maxOrder else i - self.maxOrder
-                # end = self.M-1 if i > self.M - self.maxOrder else i + self.maxOrder
-                # S[begin:end] = 1
-
-                inds = np.where(self._find_consecutive_features(S)==1)[0]
-                phi[i] = np.sum(m[inds+1]/sizes[inds+1]) # m(S) consists of all m terms that correspond to the coalition S, +1 because first element is m0
-
-                
-            return phi
-
-    def mobius_transform(self, X, **kwargs):
- 
-        explanation = self.explain(X, **kwargs)
-
-        # display_events = ["m0"]
-        # display_events += [f"m{str(int(i))}" for i in np.arange(1, X.shape[1]-self.pruning_idx+1)]
-
-        # if self.pruning_idx > 0:
-        #     display_events += ["Pruned Events"]
-
-        # for order in range(1, self.maxOrder): 
-        #     for i in np.arange(1, X.shape[1]-self.pruning_idx+1-order):
-        #         name = ['m']
-        #         name += '.'.join([str(int(j)) for j in np.arange(i, i+order+1)])
-        #         display_events += [''.join(name)]
-
-        # m = {}
-        # for mobius, term in zip(explanation, display_events):
-        #     m[term] = mobius[0] 
-        m = explanation
-
-        return m
-
-    
-    def explain(self, incoming_instance, **kwargs):
-        # convert incoming input to a standardized iml object
-        instance = convert_to_instance(incoming_instance)
-        instance.group_display_values = self.data.group_names
-        time_shap_match_instance_to_data(instance, self.data)
-
-
-        if self.mode == "feature":
-            if self.pruning_idx > 0:
-                self.varyingInds = self.varying_groups(instance.x, self.data.groups_size - 1) # R: exclude pruned events
-                # add an index for pruned events
-                self.varyingInds = np.concatenate((self.varyingInds, np.array([self.data.groups_size - 1])))
-            else:
-                self.varyingInds = self.varying_groups(instance.x, self.data.groups_size)
-        
-        elif self.mode == "event":
-            self.varyingInds = np.array([x for x in np.arange(incoming_instance.shape[1]-1, self.pruning_idx-1, -1)]) # R: start from the most recent in reversed order until pruned is reached
-
-        else:
-            raise ValueError("`explain` -> mode not suported")
-
-        if self.data.groups is None:
-            self.varyingFeatureGroups = np.array([i for i in self.varyingInds])
-            self.M = self.varyingFeatureGroups.shape[0]
-        else:
-  
-            if self.mode in ['feature']:
-                if self.pruning_idx > 0:
-                    self.varyingFeatureGroups = [self.data.groups[i] for i in self.varyingInds[:-1]]
-                else:
-                    self.varyingFeatureGroups = [self.data.groups[i] for i in self.varyingInds]
-                self.M = len(self.varyingFeatureGroups)
-                if self.pruning_idx > 0:
-                    self.M += 1
-
-            elif self.mode in ['event']:
-                self.varyingFeatureGroups = self.varyingInds
-                self.M = len(self.varyingFeatureGroups)
-                if self.pruning_idx > 0:
-                    self.M += 1
-
-
-            else:
-                raise ValueError("`explain` -> mode not suported")
-            
-            groups = self.data.groups
-            # convert to numpy array as it is much faster if not jagged array (all groups of same length)
-            if isinstance(self.varyingFeatureGroups, list) and all(len(groups[i]) == len(groups[0]) for i in range(len(self.varyingFeatureGroups))):
-                self.varyingFeatureGroups = np.array(self.varyingFeatureGroups)
-                # further performance optimization in case each group has a single value
-                if self.varyingFeatureGroups.shape[1] == 1:
-                    self.varyingFeatureGroups = self.varyingFeatureGroups.flatten()
-
-        if self.returns_hs:
-            # Removed the input variability to receive pd.series and DataFrame
-            model_out, _ = self.model.f(instance.x)
-        else:
-            model_out = self.model.f(instance.x)
-
-        self.fx = model_out[0]
-        if not self.vector_out:
-            self.fx = np.array([self.fx])
-
-        #explained_score = (self.fx - self.fnull)[0]
-        # if abs(explained_score) < 0.1:
-        #     raise ValueError(f"Score difference between baseline and instance ({explained_score}) is too low < 0.1."
-        #                      f"Baseline score: {self.fnull[0]} | Instance score: {self.fx[0]}."
-        #                      f"Consider choosing another baseline.")
-
-        # if no features vary then no feature has an effect
-        if self.M == 0:
-            phi = np.zeros((self.data.groups_size, self.D))
-
-        # if only one feature varies then it has all the effect
-        elif self.M == 1:
-            phi = np.zeros((self.data.groups_size, self.D))
-            diff = self.link.f(self.fx) - self.link.f(self.fnull) # R: v(fx) - v(fnull)
-            for d in range(self.D):
-                phi[self.varyingInds[0], d] = diff[d]
-
-        # if more than one feature varies then we have to do real work
-        else:
-            self.l1_reg = kwargs.get("l1_reg", "auto") # R: checks if l1_reg is passed else auto
-
-            # pick a reasonable number of samples if the user didn't specify how many they wanted
-            self.nsamples = kwargs.get("nsamples", "auto")
-            if self.nsamples == "auto":
-                self.nsamples = 2 * self.M + 2**11
-
-            # if we have enough samples to enumerate all subsets then ignore the unneeded samples
-            self.max_samples = 2 ** 30
-            if self.M <= 30:
-                self.max_samples = 2 ** self.M - 2 # R: -2 to delete full and empty set
-                if self.nsamples > self.max_samples:
-                    self.nsamples = self.max_samples
-
-            # reserve space for some of our computations
-            self.allocate()
-
-            # weight the different subset sizes, R: this is the kernel, weights are used in addSample, TODO: add interactions here? (kernelize interactions)
-            num_subset_sizes = int(np.ceil((self.M - 1) / 2.0)) # R: how many subset sizes to iterate over, only half because complement is added in the loop
-            num_paired_subset_sizes = int(np.floor((self.M - 1) / 2.0)) # R: how many subset sizes have a complement (e.g if M=5 1-4 and 2-3 are pairs)
-            weight_vector = np.array([(self.M - 1.0) / (i * (self.M - i)) for i in range(1, num_subset_sizes + 1)]) # R: shapley kernel, M choose |z|(i) done in line 201
-            weight_vector[:num_paired_subset_sizes] *= 2
-            weight_vector /= np.sum(weight_vector)
-            log.debug("weight_vector = {0}".format(weight_vector))
-            log.debug("num_subset_sizes = {0}".format(num_subset_sizes))
-            log.debug("num_paired_subset_sizes = {0}".format(num_paired_subset_sizes))
-            log.debug("M = {0}".format(self.M))
-
-            # fill out all the subset sizes we can completely enumerate
-            # given nsamples*remaining_weight_vector[subset_size]
-            num_full_subsets = 0
-            num_samples_left = self.nsamples
-            group_inds = np.arange(self.M, dtype='int64')
-            mask = np.zeros(self.M)
-            remaining_weight_vector = copy.copy(weight_vector)
-            for subset_size in range(1, num_subset_sizes + 1):
-
-                # determine how many subsets (and their complements) are of the current size
-                nsubsets = binom(self.M, subset_size)
-                if subset_size <= num_paired_subset_sizes: nsubsets *= 2 # R: multiply by 2 to account for complements
-                log.debug("subset_size = {0}".format(subset_size))
-                log.debug("nsubsets = {0}".format(nsubsets))
-                log.debug("self.nsamples*weight_vector[subset_size-1] = {0}".format(
-                    num_samples_left * remaining_weight_vector[subset_size - 1]))
-                log.debug("self.nsamples*weight_vector[subset_size-1]/nsubsets = {0}".format(
-                    num_samples_left * remaining_weight_vector[subset_size - 1] / nsubsets))
-
-                # see if we have enough samples to enumerate all subsets of this size
-                if num_samples_left * remaining_weight_vector[subset_size - 1] / nsubsets >= 1.0 - 1e-8:
-                    num_full_subsets += 1
-                    num_samples_left -= nsubsets
-
-                    # rescale what's left of the remaining weight vector to sum to 1
-                    if remaining_weight_vector[subset_size - 1] < 1.0:
-                        remaining_weight_vector /= (1 - remaining_weight_vector[subset_size - 1])
-
-                    # add all the samples of the current subset size
-                    w = weight_vector[subset_size - 1] / binom(self.M, subset_size) # R: weighting of current subset size, M choose |z|
-                    if subset_size <= num_paired_subset_sizes: w /= 2.0 # R: convert back to weight of size if weighted for both size and complement
-                    for inds in itertools.combinations(group_inds, subset_size):
-                        mask[:] = 0.0
-                        mask[np.array(inds, dtype='int64')] = 1.0
-                        self.add_sample(instance.x, mask, w)
-                        if subset_size <= num_paired_subset_sizes: # R: add the complement sample, because of this all the lines about *2 and /2 make sense
-                            mask[:] = np.abs(mask - 1)
-                            self.add_sample(instance.x, mask, w)
-                else:
-                    break
-            log.info("num_full_subsets = {0}".format(num_full_subsets))
-            # add random samples from what is left of the subset space
-            nfixed_samples = self.nsamplesAdded
-            samples_left = self.nsamples - self.nsamplesAdded
-            log.debug("samples_left = {0}".format(samples_left))
-            np.random.seed(self.random_seed)
-            if num_full_subsets != num_subset_sizes: # R: if we have not yet enumerated all subsets fill the rest with random samples
-                remaining_weight_vector = copy.copy(weight_vector)
-                remaining_weight_vector[:num_paired_subset_sizes] /= 2 # because we draw two samples each below
-                remaining_weight_vector = remaining_weight_vector[num_full_subsets:]
-                remaining_weight_vector /= np.sum(remaining_weight_vector)
-                log.info("remaining_weight_vector = {0}".format(remaining_weight_vector))
-                log.info("num_paired_subset_sizes = {0}".format(num_paired_subset_sizes))
-                ind_set = np.random.choice(len(remaining_weight_vector), 4 * samples_left, p=remaining_weight_vector)
-                ind_set_pos = 0
-                used_masks = {}
-                while samples_left > 0 and ind_set_pos < len(ind_set):
-                    mask.fill(0.0)
-                    ind = ind_set[ind_set_pos] # we call np.random.choice once to save time and then just read it here
-                    ind_set_pos += 1
-                    subset_size = ind + num_full_subsets + 1
-                    mask[np.random.permutation(self.M)[:subset_size]] = 1.0
-
-                    # only add the sample if we have not seen it before, otherwise just
-                    # increment a previous sample's weight
-                    mask_tuple = tuple(mask)
-                    new_sample = False
-                    if mask_tuple not in used_masks:
-                        new_sample = True
-                        used_masks[mask_tuple] = self.nsamplesAdded
-                        samples_left -= 1
-                        self.add_sample(instance.x, mask, 1.0)
-                    else:
-                        self.kernelWeights[used_masks[mask_tuple]] += 1.0
-
-                    # add the compliment sample
-                    if samples_left > 0 and subset_size <= num_paired_subset_sizes:
-                        mask[:] = np.abs(mask - 1)
-
-                        # only add the sample if we have not seen it before, otherwise just
-                        # increment a previous sample's weight
-                        if new_sample:
-                            samples_left -= 1
-                            self.add_sample(instance.x, mask, 1.0)
-                        else:
-                            # we know the compliment sample is the next one after the original sample, so + 1
-                            self.kernelWeights[used_masks[mask_tuple] + 1] += 1.0
-
-                # normalize the kernel weights for the random samples to equal the weight left after
-                # the fixed enumerated samples have been already counted
-                weight_left = np.sum(weight_vector[num_full_subsets:])
-                log.info("weight_left = {0}".format(weight_left))
-                self.kernelWeights[nfixed_samples:] *= weight_left / self.kernelWeights[nfixed_samples:].sum()
-
-            # execute the model on the synthetic samples we have created
-            self.run()
-
-            self.n_terms = np.sum(np.arange(self.M-1, self.M-1-self.maxOrder, -1))
-            self.n_terms += 1 if self.pruning_idx > 0 else 0
-            # solve then expand the feature importance (Shapley value) vector to contain the non-varying features
-            m = np.zeros((self.n_terms+1, self.D))
-            for d in range(self.D):
-                vm, m0 = self.solve(self.nsamples / self.max_samples, d) # fraction evaluated, dim --> this is the kernel (ridge?) regression
-                m[0, d] = m0
-                m[1:,d] = vm
-
-        if not self.vector_out:
-            m = np.squeeze(m, axis=1)
-
-        return m
-    
-    def solve(self, fraction_evaluated, dim): 
-        
-        X = np.zeros((self.maskMatrix.shape[0]+2, self.n_terms))
-
-        # add empty and full set with infinite weight to make sure axioms are satisfied
-        X[:-2, :] = self._find_consecutive_features(self.maskMatrix) # evaluation data
-        X[-2, :] = 0 # empty set
-        X[-1, :] = 1 # full set
-
-        y = np.zeros(self.maskMatrix.shape[0]+2)
-        y[:-2] = self.ey[:, dim]
-        y[-2] = self.link.f(self.fnull[dim])
-        y[-1] = self.link.f(self.fx[dim])
-        
-        W = np.zeros(self.maskMatrix.shape[0]+2)
-        W[:-2] = 1 #self.kernelWeights # for mobius transform all samples are weighted equally
-        W[-2:] = 1e6 # set very high weight for the full and empty set to ensure that axioms are satisfied
-
-        
         # regressor = Ridge(alpha=1, fit_intercept=True, random_state=self.random_seed) # works fine
         # regressor = Lasso(alpha=1, fit_intercept=True, random_state=self.random_seed) # Lasso makes all mabius transforms 0
         regressor = LinearRegression(fit_intercept=True) # works fine
@@ -343,197 +38,608 @@ class ConsecutiveKernel(TimeShapKernel):
         m = regressor.coef_
         m0 = regressor.intercept_
 
-        print(f"prediction full set: {regressor.predict(X[-1, :].reshape(1, -1))[0]}")
-        print(f"actual full set: {y[-1]}")
-        print(f"sum of mobius transform: {np.sum(m) + m0}")
+        phi = np.zeros(self.M)
+        m_list = []
+        for term, mobius in zip(terms, m):
+            events = term.split('.')
+            events[0] = events[0][1:]
+            for event in events:
+                phi[int(event)-1] += mobius/len(events)
 
-        print(f"prediction empty set: {regressor.predict(X[-2, :].reshape(1, -1))[0]}")
-        print(f"actual empty set: {y[-2]}")
-        print(f"m0: {m0}")
+            m_list += [[term, mobius]]
 
-        return m, m0
-    
-    def _find_consecutive_features(self, X):
+        self.mobius_transforms = dict(m_list)
+        self.m0 = m0
         
-        if X.ndim == 1:
-          
-            for order in range(1, self.maxOrder):
-                consecutives = np.zeros(self.M - 1 - order) # -1 because the pruned events are not considered for consecutive interactions
-                for j in range(self.M - 1 - order):
-           
-                    consecutives[j] = np.prod([X[j:j+order+1]])
-                
-                X = np.concatenate((X, consecutives))
+        if self.output_path:
+            if not os.path.exists(self.output_path):
+                os.makedirs(self.output_path)
 
+            pd.DataFrame(self.mobius_transforms).to_csv(f"{self.output_path}/mobius_transforms.csv", index=False)
+            pd.DataFrame(phi, columns=['Shapley Value']).to_csv(f"{self.output_path}/shapley_values.csv", index=False)
+ 
+        return phi, np.ones(len(phi))
+
+    def _find_consecutive_interactions(self, X):
+        
+        terms = [f"m{str(int(i))}" for i in np.arange(1, self.M+1)]
+
+        for order in range(1, self.M):
+            consecutives = np.zeros((X.shape[0], self.M - order)) 
+            for j in range(self.M - order):
+                name = ['m'] +  ['.'.join([str(int(j)+1) for j in np.arange(j, j+order+1)])]
+                terms += [''.join(name)]
+
+                consecutives[:, j] = np.prod(X[:, j:j+order+1], axis=1)
+            X = np.concatenate((X, consecutives), axis=1)
+
+        return X, terms
+
+class CompleteMobiusKernel(TimeShapKernel):
+    def __init__(self, model, background, rs, mode, output_path=None, lam=0.1):
+        super().__init__(model, background, rs, mode)
+        self.lam = lam
+
+    def solve(self, fraction_evaluated, dim):
+
+        eyAdj = self.linkfv(self.ey[:, dim]) - self.link.f(self.fnull[dim])
+        mat = self.maskMatrix.copy()
+        mat = np.append(mat, np.array([np.ones((self.M)), np.zeros((self.M))]), axis=0)
+        inner_prod = mat @ mat.T
+
+        sample_weights = np.append(np.ones((self.nsamples,)), [100000000]*2, axis=0)
+        Omega = 2**inner_prod - 1
+        y_hat = np.append(eyAdj, (self.fx[dim] - self.link.f(self.fnull[dim]), self.link.f(self.fnull[dim])))
+
+        sample_set_size = np.array(np.sum(mat, 1), dtype=int) 
+        size_weight = np.zeros((self.M,))
+        for i in range(1,self.M+1):
+            for j in range(1,i+1):
+                size_weight[i-1] += (1/j) * comb(i-1,j-1)
+
+        alpha_weight = np.array([size_weight[t-1] if t != 0 else  0 for t in sample_set_size])
+
+        lam = self.lam  #0.1 
+        L = cholesky(Omega + lam * np.diag(sample_weights) , lower=True)
+        alpha = cho_solve((L, True), y_hat)
+
+        shapley_val = np.zeros((self.M,))
+
+        for i in range(self.M):
+            #shapley_val[i] = (alpha_weight_sv * X_sv[:,i]) @ alpha
+            shapley_val[i] = (alpha_weight * mat[:,i]) @ alpha
+
+        return shapley_val, np.ones(len(shapley_val))
+
+class MyCompleteMobiusKernel(TimeShapKernel):
+    def __init__(self, model, background, rs, mode, output_path=None):
+        super().__init__(model, background, rs, mode)
+        self.output_path = output_path
+    
+    def solve(self, fraction_evaluated, dim):
+
+        if self.output_path: self.output_path += '/true'
+        ## calculate true mobius transforms analytically
+        # mobius transform ---------------------------------------------------------------------------------------------------------------------------
+        N = np.vstack((np.ones(self.M), self.maskMatrix)) # full set, all coalitions
+        v = np.hstack((self.fx[dim] - self.fnull[dim], self.ey[:, dim] - self.fnull[dim])) # create corresponding values for characteristic function
+
+        m = np.zeros(N.shape[0])
+        terms = []
+        # iterate over all coalitions in N
+        for i in tqdm.tqdm(range(N.shape[0])):
+            # find features in coalition
+            inds = np.nonzero(N[i, :])[0]
+            # create term for coalition
+            terms += [f'm{".".join([str(int(idx)+1) for idx in inds])}']
+            # find size of coalition S
+            S = len(inds)
+            # iterate over all subsets of coalition S including S but excluding the empty set
+            for T in range(1, S+1):
+                # create all subsets of size T
+                for sub_inds in itertools.combinations(inds, T):
+                    # create subset
+                    subset = np.zeros(N.shape[1])
+                    subset[list(sub_inds)] = 1
+                    # find index of subset in N
+                    j = np.where((N==subset).all(axis=1))[0][0]
+                    # calculate mobius transform from characteristic function v
+                    m[i] += (-1)**(S-T) * v[j]
+        
+        # calculate shapley value from mobius transform -------------------------------------------------------------------------------------------
+        # initialize shapley value vector
+        phi = np.zeros(self.M)
+
+        # go over each mobius term and distribute value equally over all events in term
+        m_list = []
+        for term, mobius in zip(terms, m):
+            events = term.split('.')
+            events[0] = events[0][1:]
+            for event in events:
+                phi[int(event)-1] += mobius/len(events)
+
+            m_list += [[term, mobius]]
+
+        # save for evaluation ---------------------------------------------------------------------------------------------------------------------
+        if self.output_path:
+            if not os.path.exists(self.output_path):
+                os.makedirs(self.output_path)
+
+            ## Mobius Transforms
+            pd.DataFrame(m_list, columns=['Term', 'Mobius Transform']).sort_values(by='Term').to_csv(f"{self.output_path}/mobius_transforms.csv", index=False)
+
+            ## Shapley Values
+            pd.DataFrame(phi, columns=['Shapley Value']).to_csv(f"{self.output_path}/shapley_values.csv", index=False)
+ 
+        return phi, np.ones(len(phi))
+
+    def _find_all_interactions(self, X):
+
+        
+        interactions = np.zeros((X.shape[0], self.n_terms), dtype='float32')
+        interactions[:, :self.M] = X
+        idx = self.M
+
+        terms = [f'm{i}' for i in range(1, self.M+1)]
+        next_terms = terms[:-1].copy()
+
+        for order in range(2, self.M+1):
+            new_terms = []
+            for term in next_terms:
+                row = []
+                for m in range(1, self.M+1):
+                    if m>int(term[1:].split('.')[-1]):
+                        terms.append(term + f'.{m}')
+                        row.append(term + f'.{m}')
+                        inds = terms[-1].split('.')
+                        inds[0] = inds[0][1:]
+                        interactions[:, idx] = np.prod(X[:, [int(i)-1 for i in inds]], axis=1)
+                        idx += 1
+                if row: new_terms += row[:-1]
+            next_terms = new_terms
+
+        return interactions, terms
+
+
+class FastConsecutiveMobiusKernel(TimeShapKernel):
+    def __init__(self, model, background, rs, mode, output_path=None, lam=0.1):
+        super().__init__(model, background, rs, mode)
+        self.lam = lam
+
+    def solve(self, fraction_evaluated, dim):
+
+        eyAdj = self.linkfv(self.ey[:, dim]) - self.link.f(self.fnull[dim])
+        mat = self.maskMatrix.copy()
+        mat = np.append(mat, np.array([np.ones((self.M)), np.zeros((self.M))]), axis=0)
+        consecutive_inner_prod = self.consecutive_inner_prod()
+
+        sample_weights = np.append(np.ones((self.nsamples,)), [100000000]*2, axis=0)
+        Omega = 2**consecutive_inner_prod - 1
+        y_hat = np.append(eyAdj, (self.fx[dim] - self.link.f(self.fnull[dim]), self.link.f(self.fnull[dim])))
+
+        sample_set_size = np.array(np.sum(mat, 1), dtype=int) 
+        size_weight = np.zeros((self.M,))
+        for i in range(1,self.M+1):
+            for j in range(1,i+1):
+                size_weight[i-1] += (1/j) * comb(i-1,j-1)
+
+        alpha_weight = np.array([size_weight[t-1] if t != 0 else  0 for t in sample_set_size])
+
+        lam = self.lam  #0.1 
+        L = cholesky(Omega + lam * np.diag(sample_weights) , lower=True)
+        alpha = cho_solve((L, True), y_hat)
+
+        shapley_val = np.zeros((self.M,))
+
+        for i in range(self.M):
+            #shapley_val[i] = (alpha_weight_sv * X_sv[:,i]) @ alpha
+            shapley_val[i] = (alpha_weight * mat[:,i]) @ alpha
+
+        return shapley_val, np.ones(len(shapley_val))
+
+    def consecutive_inner_prod(self, X):
+        # TODO: create a function that calculates the inner product of a matrix with its transpose only with consecutive elements
+
+        # example:
+        # a   =    [a11, a12
+        #  	        a21, a22, 
+        #  	        a31, a32]
+
+        # a.T =    [a11, a21, a31,
+        #       	a12, a22, a32]
+
+        # a*a.T=   [a11*a11 + a12*a12,	a11*a21 + a12*a22,	a11*a31 + a12*a32,
+        #
+        # 	        a21*a11 + a22*a12,	a21*a21 + a22*a22,	a21*a31 + a22*a32,
+        #   
+        #  	        a31*a11 + a32*a12,	a31*a21 + a32*a22, 	a31*a31 + a32*a32]
+
+
+        #      =   [a11*a11 + a12*a12,	a11*a21 + a12*a22,	          a12*a32,
+        #
+        # 	        a21*a11 + a22*a12,	a21*a21 + a22*a22,	          a22*a32,
+        #   
+        #  	                  a32*a12,	          a32*a22, 	          a32*a32]
+
+        inner_prod = X @ X.T
+        return inner_prod
+
+
+def run_experiment(f, data, baseline, pruning_idx, show_plot=True, output_path=None):
+    # iterate over nsamples
+    features = data.shape[1] - pruning_idx + 1
+    max_features = features if 2**features <= 2**13 else 13
+    nsamples_list = [2**f for f in range(5, max_features+1, 1)]
+
+    explainer = TimeShapKernel(f, baseline, 42, "event")
+    true = explainer.shap_values(data, nsamples=2**features, pruning_idx=pruning_idx)
+
+    kernels = [TimeShapKernel, ConsecutiveMobiusKernel, CompleteMobiusKernel] #TODO: switch fast back to normal
+    results = {kernel.__name__: {'error samples': [[]], 'median error': [], 'std error': [], 'runtime samples': [[]], 'median runtime': [], 'std runtime': []} for kernel in kernels}
+
+    for nsamples in tqdm.tqdm(nsamples_list):
+
+        for _ in range(5):
+            rs = np.random.randint(0, 1000)
+
+            for kernel in kernels:
+                start = time.time()
+                explainer = kernel(f, baseline, rs)
+                phi = explainer.shap_values(data, nsamples=nsamples, pruning_idx=pruning_idx)
+                end = time.time()
+
+                mse = mean_squared_error(true, phi)
+                results[kernel.__name__]['error samples'][-1] += [mse]
+                results[kernel.__name__]['runtime samples'][-1] += [end-start]
+
+        for kernel in kernels:
+            results[kernel.__name__]['median error'] += [np.median(results[kernel.__name__]['error samples'][-1])]
+            results[kernel.__name__]['std error'] += [np.std(results[kernel.__name__]['error samples'][-1])]
+            results[kernel.__name__]['error samples'] += [[]]
+
+            results[kernel.__name__]['median runtime'] += [np.median(results[kernel.__name__]['runtime samples'])]
+            results[kernel.__name__]['std runtime'] += [np.std(results[kernel.__name__]['runtime samples'])]
+            results[kernel.__name__]['runtime samples'] = [[]]
+
+
+    fig_error, error = plt.subplots(figsize=(10, 5))
+    colors = ['blue', 'red', 'green']
+    for kernel, color in zip(kernels, colors):
+        error.errorbar(nsamples_list, results[kernel.__name__]['median error'], label=kernel.__name__, fmt='-o', yerr=results[kernel.__name__]['std error'], color=color)
+
+    error.set_xlabel('Number of Samples')
+    error.set_xscale('log')
+    error.set_xticks(nsamples_list)
+    error.set_ylabel('Error')
+    error.set_title(f'Comparison of Error for Different Kernels (n={features} features)')
+    error.legend()
+    error.grid(True)
+    if show_plot: plt.show()
+
+    fig_runtime, runtime = plt.subplots(figsize=(10, 5))
+    for kernel, color in zip(kernels, colors):
+        runtime.errorbar(nsamples_list, results[kernel.__name__]['median runtime'], label=kernel.__name__, fmt='-o', yerr= results[kernel.__name__]['std runtime'], color=color)
+
+    runtime.set_xlabel('Number of Samples')
+    runtime.set_xscale('log')
+    runtime.set_xticks(nsamples_list)
+    runtime.set_ylabel('Runtime')
+    runtime.set_title(f'Comparison of Runtime for Different Kernels (n={features} features)')
+    runtime.legend()
+    runtime.grid(True)
+    if show_plot: plt.show()
+
+    if output_path:
+        output_path += '/' + str(features)
+
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+            fig_error.savefig(os.path.join(output_path, 'error.png'))
+            fig_runtime.savefig(os.path.join(output_path, 'runtime.png'))
         else:
+            print('output path already exists, please remove it first.')
 
-            for order in range(1, self.maxOrder):
-                consecutives = np.zeros((X.shape[0], self.M - 1 - order)) # -1 because the pruned events are not considered for consecutive interactions
-                for j in range(self.M - 1 - order):
-
-                    consecutives[:, j] = np.prod(X[:, j:j+order+1], axis=1)
-                X = np.concatenate((X, consecutives), axis=1)
+    return results
 
 
-        return X
-            
-
-
-
-    
-def feature_level(f: Callable,
-                  data: np.ndarray,
-                  baseline: np.ndarray,
-                  pruned_idx: int,
-                  random_seed: int,
-                  nsamples: int,
-                  model_feats: List[Union[int, str]] = None,
-                  ) -> pd.DataFrame:
-    """Method to calculate feature level explanations
-
-    Parameters
-    ----------
-    f: Callable[[np.ndarray], np.ndarray]
-        Point of entry for model being explained.
-        This method receives a 3-D np.ndarray (#samples, #seq_len, #features).
-        This method returns a 2-D np.ndarray (#samples, 1).
-
-    data: np.array
-        Sequence to explain.
-
-    baseline: Union[np.ndarray, pd.DataFrame],
-        Dataset baseline. Median/Mean of numerical features and mode of categorical.
-        In case of np.array feature are assumed to be in order with `model_features`.
-        The baseline can be an average event or an average sequence
-
-    pruned_idx: int
-        Index to prune the sequence. All events up to this index are grouped
-
-    random_seed: int
-        Used random seed for the sampling process.
-
-    nsamples: int
-        The number of coalitions for TimeSHAP to sample.
-
-    model_feats: List[Union[int, str]]
-        The list of feature names.
-        If none is provided, "Feature 1" format is used
-
-    Returns
-    -------
-    pd.DataFrame
-    """
-    if pruned_idx == -1:
-        pruned_idx = 0
-
-    explainer = ConsecutiveKernel(f, baseline, random_seed, "feature")
-    shap_values = explainer.shap_values(data, pruning_idx=pruned_idx, nsamples=nsamples)
-
-    if model_feats is None:
-        model_feats = ["Feature {}".format(i) for i in np.arange(data.shape[2])]
-
-    model_feats = copy.deepcopy(model_feats)
-    if pruned_idx > 0:
-        model_feats += ["Pruned Events"]
-
-    ret_data = []
-    for exp, feature in zip(shap_values, model_feats):
-        ret_data += [[random_seed, nsamples, feature, exp]]
-    return pd.DataFrame(ret_data, columns=['Random seed', 'NSamples', 'Feature', 'Shapley Value'])
-
-def event_level(f: Callable,
-                data: np.array,
-                baseline: Union[np.ndarray, pd.DataFrame],
-                pruned_idx: int,
-                random_seed: int,
-                nsamples: int,
-                display_events: List[str] = None,
-                maxOrder: int = 1
-                ) -> pd.DataFrame:
-    """Method to calculate event level explanations
-
-    Parameters
-    ----------
-    f: Callable[[np.ndarray], np.ndarray]
-        Point of entry for model being explained.
-        This method receives a 3-D np.ndarray (#samples, #seq_len, #features).
-        This method returns a 2-D np.ndarray (#samples, 1).
-
-    data: np.array
-        Sequence to explain.
-
-    baseline: Union[np.ndarray, pd.DataFrame],
-        Dataset baseline. Median/Mean of numerical features and mode of categorical.
-        In case of np.array feature are assumed to be in order with `model_features`.
-        The baseline can be an average event or an average sequence
-
-    pruned_idx: int
-        Index to prune the sequence. All events up to this index are grouped
-
-    random_seed: int
-        Used random seed for the sampling process.
-
-    nsamples: int
-        The number of coalitions for TimeSHAP to sample.
-
-    display_events: List[str]
-        In-order list of event names to be displayed
-
-    Returns
-    -------
-    pd.DataFrame
-    """
-    explainer = ConsecutiveKernel(f, baseline, random_seed, "event", maxOrder=maxOrder)
-    phi = explainer.shap_values(data, pruning_idx=pruned_idx, nsamples=nsamples)
-
-    if display_events is None:
-        display_events = [f"Event -{str(int(i))}" for i in np.arange(1, data.shape[1]-pruned_idx+1)]
-
-        if pruned_idx > 0:
-            display_events += ["Pruned Events"]
-
-    ret_data = []
-    for exp, event in zip(phi, display_events):
-        ret_data += [[random_seed, nsamples, event, exp]]
+class HEDGE:
+    def __init__(self, model, data, baseline=None, pruning_idx=0, win_size=5):
+        score = model(data)[0][0]
+        self.pred_label = round(score)
    
-    return pd.DataFrame(ret_data, columns=['rs', 'nsamples', 'event', 'shapley value']) # rs, nsamples, event, shapley value
+        self.pruning_idx = pruning_idx
+        self.fea_num = data.shape[1] - self.pruning_idx
 
-def add_interactions(X, cols, maxOrder=1, index_column='timestamp', mode='inner'):
-    '''
-    Creates consecutive interactions within features up to maxOrder
-    '''
+        self.model = model
+        self.data = data
+        self.win_size = win_size #TODO: not needed with mobius
+
+        if baseline is None:
+            self.baseline = np.expand_dims(np.zeros(data.shape[1]), axis=[0,2])
+        else:
+            self.baseline = baseline
+        self.bias = model(baseline)[0][0]
+        self.valdict = dict()
+
+
+    def set_contribution_func(self, fea_set):
+        # input has just one sentence, input is a list
+        flat_fea = [f for fea in fea_set for f in fea]
+        flat_fea = frozenset(flat_fea)
+        if flat_fea in self.valdict:
+            return self.valdict[frozenset(flat_fea)]
+        
+        data = self.data
+        mask_data = np.zeros(data.shape[1])
+        
+        for fea_idx in fea_set:
+                for idx in fea_idx:
+                    mask_data[self.pruning_idx + idx] = data[0, self.pruning_idx+ idx, 0]
+
+        mask_data = np.expand_dims(mask_data, axis=[0,2])
+        score = self.model(mask_data)[0][0]
+        contri = score - self.bias
+        self.valdict[frozenset(flat_fea)] = contri
+        
+        return contri
+
+    def get_shapley_interaction_weight(self, d, s):
+        return np.math.factorial(s) * np.math.factorial(d - s - 2) / np.math.factorial(d - 1) / 2
+
+    def shapley_interaction_approx(self, feature_set, left, right):
+        win_size = self.win_size
+        if left + 1 != right:
+            print("Not adjacent interaction")
+            return -1
+        fea_num = len(feature_set)
+        curr_set_lr = [feature_set[left], feature_set[right]]
+        curr_set_l = [feature_set[left]]
+        curr_set_r = [feature_set[right]]
+        if left + 1 - win_size > 0:
+            left_set = feature_set[left - win_size:left]
+        else:
+            left_set = feature_set[0:left]
+        if right + win_size > fea_num - 1:
+            right_set = feature_set[right + 1:]
+        else:
+            right_set = feature_set[right + 1:right + win_size + 1]
+        adj_set = left_set + right_set
+        num_adj = len(adj_set)
+        dict_subset = {r: list(combinations(adj_set, r)) for r in range(num_adj + 1)}
+        
+        for i in range(num_adj + 1):
+            weight = self.get_shapley_interaction_weight(fea_num, i)
+            if i == 0:
+                score_included = self.set_contribution_func(curr_set_lr)
+                score_excluded_l = self.set_contribution_func(curr_set_r)
+                score_excluded_r = self.set_contribution_func(curr_set_l)
+                score_excluded = self.set_contribution_func([[]])
+                score = (score_included - score_excluded_l - score_excluded_r + score_excluded) * weight
+            else:
+                for subsets in dict_subset[i]:
+                    score_included = self.set_contribution_func(list(subsets) + curr_set_lr)
+                    score_excluded_l = self.set_contribution_func(list(subsets) + curr_set_r)
+                    score_excluded_r = self.set_contribution_func(list(subsets) + curr_set_l)
+                    score_excluded = self.set_contribution_func(list(subsets))
+                    score += (score_included - score_excluded_l - score_excluded_r + score_excluded) * weight
+        return score
+
+    def shapley_topdown_tree(self):
+        fea_num = self.fea_num
+        if fea_num == 0:
+            return -1
+        fea_set = [list(range(fea_num))]
+       
+        self.hier_tree = {}
+        self.hier_tree[0] = [(fea_set[0], self.v(fea_set[0]))]
+
+        for level in range(1, self.fea_num):
+            pos = 0
+            min_inter_score = 1e8
+            while pos < len(fea_set):
+                subset = fea_set[pos]
+                sen_len = len(subset)
+                if sen_len == 1:
+                    pos += 1
+                    continue
+                new_fea_set = [ele for x, ele in enumerate(fea_set) if x != pos]
+                score_buff = []
+                for idx in range(1, sen_len):
+                    leave_one_set = deepcopy(new_fea_set)
+                    sub_set1 = subset[0:idx]
+                    sub_set2 = subset[idx:]
+                    leave_one_set.insert(pos, sub_set1)
+                    leave_one_set.insert(pos + 1, sub_set2)
+                    score_buff.append(self.shapley_interaction_approx(leave_one_set, pos, pos + 1))
+                inter_score = np.array(score_buff)
+                min_inter_idx = np.argmin(inter_score)
+                minter = inter_score[min_inter_idx]
+                if minter < min_inter_score:
+                    min_inter_score = minter
+                    inter_idx_opt = min_inter_idx
+                    pos_opt = pos
+                pos += 1
+
+            new_fea_set = [ele for x, ele in enumerate(fea_set) if x != pos_opt]
+            subset = fea_set[pos_opt]
+            sub_set1 = subset[0:inter_idx_opt + 1]
+            sub_set2 = subset[inter_idx_opt + 1:]
+            new_fea_set.insert(pos_opt, sub_set1)
+            new_fea_set.insert(pos_opt + 1, sub_set2)
+            fea_set = new_fea_set
+            new_level = []
+            for fea in fea_set:
+                new_level.append((fea, self.v(fea)))
+            self.hier_tree[level] = new_level
+        self.max_level = level
+        return self.hier_tree
+
+    def get_importance_phrase(self):
+        phrase_dict = dict()
+        for level in range(1,self.max_level+1):
+            for fea_set, score in self.hier_tree[level]:
+                phrase_dict[frozenset(fea_set)] = score
+        phrase_tuple = sorted(phrase_dict.items(), key=lambda item: item[1], reverse=True)
+        phrase_list = [list(item[0]) for item in phrase_tuple]
+        score_list = [item[1] for item in phrase_tuple]
+        return phrase_list, score_list
+
+
+    def visualize_tree(self, wordvocab, fontsize=8, folder='model/now', tag='x'):
+        levels = self.max_level
+
+        cnorm = mpl.colors.Normalize(vmin=-1, vmax=1, clip=False)
+        cmapper = mpl.cm.ScalarMappable(norm=cnorm, cmap='RdYlBu_r')
+
+        words = self.data[0, self.pruning_idx:, 0]
+        fig, ax = plt.subplots(figsize=(12, 7))
+        ax.xaxis.set_visible(False)
+
+        ylabels = ['Step '+str(idx) for idx in range(self.max_level+1)] + ['Baseline']
+        ax.set_yticks(list(range(0, self.max_level+2)))
+        ax.set_yticklabels(ylabels,fontsize=18)
+        ax.set_ylim(self.max_level+1.5, 0-0.5)
+
+        sep_len = 0.3
+        for level in range(levels+1):
+            for fea in self.hier_tree[level]:
+                len_fea = 1 if type(fea[0]) == int else len(fea[0])
+                start_fea = fea[0] if type(fea[0])==int else fea[0][0]
+                start = sep_len * start_fea + start_fea + 0.5
+                width = len_fea + sep_len * (len_fea - 1)
+                fea_color = cmapper.to_rgba(fea[1])
+                ax.barh(level, width=width, height=0.5, left=start, color=fea_color)
+                text_color = 'black'
+                ax.text(start + width / 2, level-0.2, str(round(fea[1], 2)), ha='center', va='center', color=text_color, fontsize=fontsize)
+                word_idxs = fea[0]
+                for i, idx in enumerate(word_idxs):
+                    word_pos = start + sep_len * (i) + i + 0.5
+                    word_str = wordvocab[words[idx]]
+                    ax.text(word_pos, level, word_str, ha='center', va='center',
+                            color=text_color, fontsize=fontsize)
+                    word_pos += sep_len
+                start += (width + sep_len)
+        # add baseline
+        height = levels+1
+        width = len(words) + sep_len * (len(words) - 1)
+        start = 0.5
+        value = self.bias+self.m0
+        fea_color = cmapper.to_rgba(value)
+        ax.barh(height, width=width, height=0.5, left=start, color=fea_color)
+        ax.text(start + width / 2, height, str(round(value, 2)), ha='center', va='center', color=text_color, fontsize=12)
+        cb = fig.colorbar(cmapper, ax=ax)
+        cb.ax.tick_params(labelsize=18)
+
+        path = f'experiments/HEDGE/{folder}'
+        if not os.path.exists(path):
+            os.makedirs(path)
+        plt.savefig(f'{path}/visualization_sentence_{tag}.png')
+        # plt.show()
+
+
+class MobiusHEDGE(HEDGE): # note, events in mobius are counted in opposite direction from HEDGE (1 is last event in mobius, 0 is first event in HEDGE) 
+    def __init__(self, model, data, baseline=None, pruning_idx=0, win_size=None):
+        super().__init__(model, data, baseline=baseline, pruning_idx=pruning_idx, win_size=win_size)
+        explainer = ConsecutiveMobiusKernel(model, baseline, 42)
+        self.shap_values = explainer.shap_values(data, nsamples=2048, pruning_idx=pruning_idx) 
+        self.m = explainer.mobius_transforms
+        self.m0 = explainer.m0
+        print('mobius transform calculated')
+
+    def shapley_interaction_approx(self, feature_set, left, right):
+        return self.mobius_interaction(feature_set, left, right)
+
+        'Calculate Shapley Interaction Index with mobius transform approximation'	
+
+        left = feature_set[left]
+        right = feature_set[right]
+
+        X = set([f for fea in feature_set for f in fea])
+        T = set(left+right)
+        n = len(X)
+
+        sii = 0
+        for size in range(n-len(T)):
+            for K in itertools.combinations(X-T, size):
+                TK = set(K).union(T)
+                name = 'm' + '.'.join([str(i+1) for i in TK])
+                m = self.m[name] if name in self.m else 0 # consecutive assumption
+                sii += 1/(size + 1) * m
+        return sii
+
+    def v(self, features):
+        'value wrt bias of a span of features calculated with mobius transform'
+
+        # because events are counted in opposite direction from HEDGE, we need to reverse the order of features
+        # example: HEDGE features = [0, 1, 2, 3, 4], Mobius features = [5, 4, 3, 2, 1]
+        #          HEDGE features = [1, 2, 3], Mobius features = [4, 3, 2]
+        features = sorted([-(f-self.fea_num) for f in features])
+
+        # value = 0
+        # for size in range(1, len(features)+1):
+        #     for coal in itertools.combinations(features, size):
+        #         name = 'm' + '.'.join([str(i) for i in coal])
+        #         if name in self.m:
+        #             value += self.m[name]
+
+        value = 0
+        for i, start_feature in enumerate(features):
+            name = 'm' + str(start_feature)
+            value += self.m[name]
+
+            for next_feature in features[i+1:]:
+                name += '.' + str(next_feature)
+                value += self.m[name]
+
+
+        return value
+
+    def mobius_interaction(self, feature_set, left, right):
+        'Calculates the value of a coalition if features can only interact within their span.'
+
+        # value = 0
+        # for span in feature_set:
+        #     value += self.v(span)
+
+        # # TODO get previous value from hier_tree
+
+        # # level_up = feature_set[:left] + [feature_set[left] + feature_set[right]] + feature_set[right + 1:]
+
+        # # prior_value = 0
+        # # for span in level_up:
+        # #     prior_value += self.v(span)
+        # prior_level = list(self.hier_tree.keys())[-1]
+        # prior_value = self.hier_tree[prior_level][1]
+
+        value = self.v(feature_set[left]) + self.v(feature_set[right])
+
+        prior_level = list(self.hier_tree.keys())[-1]
+        prior_value = self.hier_tree[prior_level][left][1]
+
+        return abs(prior_value - value)
+
+    def compute_shapley_hier_tree(self):
+        hier_tree = self.shapley_topdown_tree()
+        self.hier_tree = {}
+        for level in range(self.max_level+1):
+            self.hier_tree[level] = []
+            for idx, subset in enumerate(hier_tree[level]):
+                score = self.v(subset)
+                self.hier_tree[level].append((subset,score))
+        return self.hier_tree
     
+    def find_highest_interaction(self):
+        max_inter_score = 0
+        for level in range(1, self.max_level+1):
+            for fea_set, score in self.hier_tree[level]:
+                timeshap_set = [-(f-self.fea_num) for f in fea_set]
+                for fea in timeshap_set:
+                    score -= self.m[f'm{fea}']
+                if abs(score) > max_inter_score:
+                    max_inter_score = abs(score)
+                    max_inter_set = fea_set
+        
+        return max_inter_set
 
-
-    # initialize empty list to store new features, features interactions of the same order are in the same list
-    interactions = [X]
-
-    for order in range(maxOrder):
-        # initialize empty list to store the new features of the current order
-        interactionsNextOrder = pd.DataFrame()
-        # iterate over all the features of the current order
-        for col in cols:
-            # TODO: add outer interaction mode
-            interactionsNextOrder[col] = interactions[order][col] * X[col].shift(-(order + 1))
-
-            # delete non-consecutive interactions
-            is_consecutive = X[index_column].shift(-(order+1)) - X[index_column] == order+1
-            inds = np.where(~is_consecutive)[0]
-            interactionsNextOrder.loc[inds, col] = np.nan
-
-        interactions.append(interactionsNextOrder)
-
-    # rename features to include the interaction order
-    for order in range(1, maxOrder+1):
-        interactions[order].columns = [f"{col}_interactionOrder{order}" for col in cols]
-
-    # concatenate all interaction features
-    interactions = pd.concat(interactions[1:], axis=1)
-    # add interaction features to the original dataset
-    X = pd.concat([X, interactions], axis=1)
-    # remove the first maxOrder rows, as they contain NaNs
-    # X = X.iloc[maxOrder:]
-
-
-    return X
+        
 

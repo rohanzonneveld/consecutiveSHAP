@@ -1,0 +1,14 @@
+{
+    "time": "2024-05-27 11:05",
+    "label": "1",
+    "prediction": "0.999201238155365",
+    "baseline model": "0.8797289729118347",
+    "baseline game": "0.8926834687590599",
+    "mobius sum": "0.9862358288373798",
+    "sentence": "add this little gem to your list of holiday regulars. it is<br /><br />sweet, funny, and endearing ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 9,
+    "input sentence": "add this little gem to your list of holiday regulars. it is<br /><br />sweet, funny, and endearing "
+}

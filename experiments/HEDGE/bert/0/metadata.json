@@ -1,0 +1,19 @@
+{
+    "time": "2024-05-27 14:16",
+    "label": "0",
+    "prediction": "0.00011344392987666652",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.53659987449646",
+    "mobius sum": "0.30277879256755114",
+    "sentence": "primary plot!primary direction!poor interpretation. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 0,
+    "input sentence": "primary plot!primary direction!poor interpretation. ",
+    "max interaction set": [
+        5,
+        6,
+        7
+    ]
+}

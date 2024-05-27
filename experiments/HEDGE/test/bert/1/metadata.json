@@ -1,0 +1,14 @@
+{
+    "time": "2024-05-27 10:58",
+    "label": "0",
+    "prediction": "0.00017179647693410516",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.8256202936172485",
+    "mobius sum": "0.019281670451164246",
+    "sentence": "read the book, forget the movie! ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 1,
+    "input sentence": "read the book, forget the movie! "
+}

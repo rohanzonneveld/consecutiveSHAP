@@ -1,0 +1,19 @@
+{
+    "time": "2024-05-27 14:18",
+    "label": "0",
+    "prediction": "0.9989070892333984",
+    "baseline model": "0.8657205700874329",
+    "baseline game": "0.7215531915426254",
+    "mobius sum": "1.143074500374496",
+    "sentence": "more suspenseful, more subtle, much, much more disturbing.... ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 2,
+    "input sentence": "more suspenseful, more subtle, much, much more disturbing.... ",
+    "max interaction set": [
+        4,
+        5,
+        6
+    ]
+}
