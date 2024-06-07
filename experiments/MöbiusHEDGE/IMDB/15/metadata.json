@@ -1,0 +1,18 @@
+{
+    "time": "2024-05-28 14:17",
+    "label": "1",
+    "prediction": "0.999117910861969",
+    "baseline model": "0.8936719298362732",
+    "baseline game": "0.8612189218401909",
+    "mobius sum": "1.0315705661196262",
+    "sentence": "one of the funniest movies made in recent years. good characterization, plot and exceptional chemistry make this one a classic ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 15,
+    "input sentence": "one of the funniest movies made in recent years. good characterization, plot and exceptional chemistry make this one a classic ",
+    "max interaction set": [
+        12,
+        13
+    ]
+}

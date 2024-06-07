@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 10:55",
+    "label": "-1",
+    "prediction": "0.1257745921611786",
+    "baseline model": "0.8447302579879761",
+    "sentence": "not even the hanson brothers can save it",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 163,
+    "input sentence": "not even the hanson brothers can save it",
+    "max interaction set": [
+        5,
+        6
+    ]
+}

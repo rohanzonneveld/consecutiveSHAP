@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 10:56",
+    "label": "-1",
+    "prediction": "0.0011064511490985751",
+    "baseline model": "0.8392652273178101",
+    "sentence": "the movie bounces all over the map .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 188,
+    "input sentence": "the movie bounces all over the map .",
+    "max interaction set": [
+        4,
+        5
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "time": "2024-05-28 14:14",
+    "label": "1",
+    "prediction": "0.022304043173789978",
+    "baseline model": "0.8918254971504211",
+    "baseline game": "0.8882223963737488",
+    "mobius sum": "0.02591852005571127",
+    "sentence": "this is a good film. this is very funny. yet after this film there were no good ernest films! ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 13,
+    "input sentence": "this is a good film. this is very funny. yet after this film there were no good ernest films! ",
+    "max interaction set": [
+        17,
+        18,
+        19
+    ]
+}

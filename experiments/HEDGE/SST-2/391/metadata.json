@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-07 11:02",
+    "label": "-1",
+    "prediction": "0.997572124004364",
+    "baseline model": "0.847303569316864",
+    "sentence": "but he somehow pulls it off .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 391,
+    "input sentence": "but he somehow pulls it off .",
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

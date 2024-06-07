@@ -1,0 +1,19 @@
+{
+    "time": "2024-05-29 10:53",
+    "label": "1",
+    "prediction": "0.9991921782493591",
+    "baseline model": "0.8875489830970764",
+    "baseline game": "0.8940196856856346",
+    "mobius sum": "0.9927132788579911",
+    "sentence": "just love the interplay between two great characters of stage & screen - veidt & barrymore ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 8,
+    "input sentence": "just love the interplay between two great characters of stage & screen - veidt & barrymore ",
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

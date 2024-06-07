@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:15",
+    "label": "-1",
+    "prediction": "0.015101933851838112",
+    "baseline model": "0.8583206534385681",
+    "baseline game": "0.7837486863136292",
+    "mobius sum": "0.08967391215264797",
+    "sentence": "so what is the point ?",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 342,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

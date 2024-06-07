@@ -1,0 +1,33 @@
+{
+    "time": "2024-05-28 14:16",
+    "label": "1",
+    "prediction": "0.9992092847824097",
+    "baseline model": "0.8879498839378357",
+    "baseline game": "0.9258804023265839",
+    "mobius sum": "0.9612787523074076",
+    "sentence": "without a doubt, one of tobe hoppor's best! epic storytellng, great special effects, and the spacegirl (vamp me baby!). ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 14,
+    "input sentence": "without a doubt, one of tobe hoppor's best! epic storytellng, great special effects, and the spacegirl (vamp me baby!). ",
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ]
+}

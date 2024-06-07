@@ -1,0 +1,27 @@
+{
+    "time": "2024-05-29 10:52",
+    "label": "0",
+    "prediction": "0.0001218499819515273",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.47003161907196045",
+    "mobius sum": "0.3789977878332138",
+    "sentence": "what a script, what a story, what a mess! ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 4,
+    "input sentence": "what a script, what a story, what a mess! ",
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

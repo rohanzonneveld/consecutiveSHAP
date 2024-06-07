@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:13",
+    "label": "-1",
+    "prediction": "0.9989312291145325",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.8435969054698944",
+    "mobius sum": "0.9945995640009642",
+    "sentence": "woo 's fights have a distinct flair .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 111,
+    "max interaction set": [
+        5,
+        6,
+        7
+    ]
+}

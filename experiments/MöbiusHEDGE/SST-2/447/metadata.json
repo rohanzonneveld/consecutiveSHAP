@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-07 11:17",
+    "label": "-1",
+    "prediction": "0.9882730841636658",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.8139327168464661",
+    "mobius sum": "1.0190706928260624",
+    "sentence": "but even a hero can stumble sometimes .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 447,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

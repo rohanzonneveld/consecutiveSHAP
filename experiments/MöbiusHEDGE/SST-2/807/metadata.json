@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:21",
+    "label": "-1",
+    "prediction": "0.012010433711111546",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.6885050535202026",
+    "mobius sum": "0.17080895230174065",
+    "sentence": "i hated every minute of it .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 807,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

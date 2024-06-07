@@ -1,0 +1,12 @@
+{
+    "time": "2024-06-05 17:07",
+    "label": "-1",
+    "prediction": "0.0006519634043797851",
+    "baseline model": "[0.83926523]",
+    "sentence": "uneasy mishmash of styles and genres .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 0,
+    "input sentence": "uneasy mishmash of styles and genres ."
+}

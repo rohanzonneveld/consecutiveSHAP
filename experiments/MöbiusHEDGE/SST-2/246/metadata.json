@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:15",
+    "label": "-1",
+    "prediction": "0.9954240918159485",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.6726967990398407",
+    "mobius sum": "1.167457552626729",
+    "sentence": "a bravura exercise in emptiness .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 246,
+    "max interaction set": [
+        4,
+        5
+    ]
+}

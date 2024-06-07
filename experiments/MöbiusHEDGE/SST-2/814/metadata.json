@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:22",
+    "label": "-1",
+    "prediction": "0.6202558279037476",
+    "baseline model": "0.8583206534385681",
+    "baseline game": "0.9029229879379272",
+    "mobius sum": "0.5756535083055496",
+    "sentence": "what happened with pluto nash ?",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 814,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

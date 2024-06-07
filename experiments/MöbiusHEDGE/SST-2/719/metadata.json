@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-07 11:20",
+    "label": "-1",
+    "prediction": "0.06429979205131531",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.8726744055747986",
+    "mobius sum": "0.030890734866261482",
+    "sentence": "i like frank the pug , though .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 719,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]
+}

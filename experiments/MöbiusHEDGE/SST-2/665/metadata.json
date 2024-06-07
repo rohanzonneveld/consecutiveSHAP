@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:19",
+    "label": "-1",
+    "prediction": "0.9985887408256531",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.8259532898664474",
+    "mobius sum": "1.0119006731547415",
+    "sentence": "star wars is back in a major way .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 665,
+    "max interaction set": [
+        2,
+        3
+    ]
+}

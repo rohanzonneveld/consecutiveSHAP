@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-07 11:11",
+    "label": "-1",
+    "prediction": "0.00026069971499964595",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.8607767224311829",
+    "mobius sum": "-0.013212461723014712",
+    "sentence": "barely goes beyond comic book status .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 50,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ]
+}

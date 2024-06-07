@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:18",
+    "label": "-1",
+    "prediction": "0.9990932941436768",
+    "baseline model": "0.8513853549957275",
+    "baseline game": "0.635280042886734",
+    "mobius sum": "1.2151985988020897",
+    "sentence": "a very funny movie .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 491,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-07 11:18",
+    "label": "-1",
+    "prediction": "0.0003503634361550212",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.8011882901191711",
+    "mobius sum": "0.03842733055353165",
+    "sentence": "fails to bring as much to the table .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 503,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ]
+}

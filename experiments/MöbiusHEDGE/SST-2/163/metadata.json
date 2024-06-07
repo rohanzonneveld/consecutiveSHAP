@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:14",
+    "label": "-1",
+    "prediction": "0.1257745921611786",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.878921389579773",
+    "mobius sum": "0.09158349968492985",
+    "sentence": "not even the hanson brothers can save it",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 163,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

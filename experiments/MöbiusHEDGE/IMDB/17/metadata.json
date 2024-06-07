@@ -1,0 +1,19 @@
+{
+    "time": "2024-05-28 14:20",
+    "label": "1",
+    "prediction": "0.9961128234863281",
+    "baseline model": "0.8964805603027344",
+    "baseline game": "0.9111836478114128",
+    "mobius sum": "0.9814082341035828",
+    "sentence": "for pure gothic vampire cheese nothing can compare to the subspecies films. i highly recommend each and every one of them. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 17,
+    "input sentence": "for pure gothic vampire cheese nothing can compare to the subspecies films. i highly recommend each and every one of them. ",
+    "max interaction set": [
+        13,
+        14,
+        15
+    ]
+}

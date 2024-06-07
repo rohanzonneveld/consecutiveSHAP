@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 10:56",
+    "label": "-1",
+    "prediction": "0.9968273043632507",
+    "baseline model": "0.8513853549957275",
+    "sentence": "well worth the time .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 212,
+    "input sentence": "well worth the time .",
+    "max interaction set": [
+        0,
+        1
+    ]
+}

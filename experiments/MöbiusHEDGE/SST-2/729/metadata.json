@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:20",
+    "label": "-1",
+    "prediction": "0.0007664177101105452",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.8325950503349304",
+    "mobius sum": "0.007436494342982769",
+    "sentence": "credibility sinks into a mire of sentiment .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 729,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "time": "2024-05-29 10:53",
+    "label": "1",
+    "prediction": "0.9991543292999268",
+    "baseline model": "0.8909936547279358",
+    "baseline game": "0.8835419192910194",
+    "mobius sum": "1.0066062603145838",
+    "sentence": "a mesmerizing film that certainly keeps your attention... ben daniels is fascinating (and courageous) to watch. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 7,
+    "input sentence": "a mesmerizing film that certainly keeps your attention... ben daniels is fascinating (and courageous) to watch. ",
+    "max interaction set": [
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:21",
+    "label": "-1",
+    "prediction": "0.990749180316925",
+    "baseline model": "0.8583206534385681",
+    "baseline game": "0.830837070941925",
+    "mobius sum": "1.0182327637448907",
+    "sentence": "he 's super spy !",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 753,
+    "max interaction set": [
+        3,
+        4
+    ]
+}

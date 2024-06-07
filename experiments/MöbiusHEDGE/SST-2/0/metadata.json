@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-07 11:11",
+    "label": "-1",
+    "prediction": "0.0006519634043797851",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "1.1357632279396057",
+    "mobius sum": "-0.29584596352651715",
+    "sentence": "uneasy mishmash of styles and genres .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 0,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

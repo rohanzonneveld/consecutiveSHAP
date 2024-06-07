@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-07 11:18",
+    "label": "-1",
+    "prediction": "0.9985931515693665",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.7128658890724182",
+    "mobius sum": "1.1330308145843446",
+    "sentence": "good ol' urban legend stuff .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 525,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ]
+}

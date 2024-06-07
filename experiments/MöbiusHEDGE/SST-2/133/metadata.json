@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-07 11:13",
+    "label": "-1",
+    "prediction": "0.9989365935325623",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.6520569026470184",
+    "mobius sum": "1.1916099162772298",
+    "sentence": "the visuals alone make metropolis worth seeing .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 133,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ]
+}

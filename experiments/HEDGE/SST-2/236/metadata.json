@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-07 10:57",
+    "label": "-1",
+    "prediction": "0.06302476674318314",
+    "baseline model": "0.8392652273178101",
+    "sentence": "another rent installment for the ian fleming estate .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 236,
+    "input sentence": "another rent installment for the ian fleming estate .",
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]
+}

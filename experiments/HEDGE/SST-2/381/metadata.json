@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:01",
+    "label": "-1",
+    "prediction": "0.00014427321730181575",
+    "baseline model": "0.8392652273178101",
+    "sentence": "it 's an awfully derivative story .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 381,
+    "input sentence": "it 's an awfully derivative story .",
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3
+    ]
+}

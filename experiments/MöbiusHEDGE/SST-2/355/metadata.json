@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-07 11:15",
+    "label": "-1",
+    "prediction": "0.999152660369873",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.8236814141273499",
+    "mobius sum": "1.0202015065879095",
+    "sentence": "kinnear gives a tremendous performance .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 355,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

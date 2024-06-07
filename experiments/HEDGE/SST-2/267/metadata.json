@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 10:59",
+    "label": "-1",
+    "prediction": "0.997894823551178",
+    "baseline model": "0.8447302579879761",
+    "sentence": "something the true film buff will enjoy .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 267,
+    "input sentence": "something the true film buff will enjoy .",
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4
+    ]
+}

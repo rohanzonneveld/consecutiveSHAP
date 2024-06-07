@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:17",
+    "label": "-1",
+    "prediction": "0.06160401925444603",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.975826621055603",
+    "mobius sum": "-0.0749574564397335",
+    "sentence": "now , if it only had a brain .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 462,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

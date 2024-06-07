@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-07 11:20",
+    "label": "-1",
+    "prediction": "0.9990659356117249",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.623580664396286",
+    "mobius sum": "1.220215565059334",
+    "sentence": "the cast is uniformly excellent and relaxed .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 689,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6
+    ]
+}

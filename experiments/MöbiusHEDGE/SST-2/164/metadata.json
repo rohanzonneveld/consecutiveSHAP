@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:14",
+    "label": "-1",
+    "prediction": "0.017605196684598923",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.8899745941162109",
+    "mobius sum": "-0.025065846741199493",
+    "sentence": "then lower them a bit more .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 164,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

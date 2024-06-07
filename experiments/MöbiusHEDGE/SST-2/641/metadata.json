@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:19",
+    "label": "-1",
+    "prediction": "0.983183741569519",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.6484417915344238",
+    "mobius sum": "1.1820455705747008",
+    "sentence": "this is one for the ages .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 641,
+    "max interaction set": [
+        0,
+        1
+    ]
+}

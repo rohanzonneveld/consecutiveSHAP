@@ -1,0 +1,24 @@
+{
+    "time": "2024-05-28 14:27",
+    "label": "1",
+    "prediction": "0.9989684820175171",
+    "baseline model": "0.8840640783309937",
+    "baseline game": "0.9061810225248337",
+    "mobius sum": "0.9768463019281626",
+    "sentence": "if you've ever had a mad week-end out with your mates then you'll appreciate this film. excellent fun and a laugh a minute. ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 21,
+    "input sentence": "if you've ever had a mad week-end out with your mates then you'll appreciate this film. excellent fun and a laugh a minute. ",
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ]
+}

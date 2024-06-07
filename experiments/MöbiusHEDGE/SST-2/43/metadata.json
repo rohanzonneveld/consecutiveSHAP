@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:11",
+    "label": "-1",
+    "prediction": "0.999091386795044",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.7671875208616257",
+    "mobius sum": "1.0711691151955165",
+    "sentence": "sensitive , insightful and beautifully rendered film .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 43,
+    "max interaction set": [
+        6,
+        7
+    ]
+}

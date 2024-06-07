@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:11",
+    "label": "-1",
+    "prediction": "0.9807284474372864",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.7801708728075027",
+    "mobius sum": "1.045287851622561",
+    "sentence": "most new movies have a bright sheen .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 30,
+    "max interaction set": [
+        3,
+        4
+    ]
+}

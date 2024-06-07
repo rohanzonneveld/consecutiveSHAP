@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-07 11:11",
+    "label": "-1",
+    "prediction": "0.019794395193457603",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.7661051154136658",
+    "mobius sum": "0.10099275782704353",
+    "sentence": "how did it ever get made ?",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 47,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6
+    ]
+}

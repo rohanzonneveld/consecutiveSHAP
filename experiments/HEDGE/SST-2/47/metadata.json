@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 10:49",
+    "label": "-1",
+    "prediction": "0.019794395193457603",
+    "baseline model": "0.847303569316864",
+    "sentence": "how did it ever get made ?",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 47,
+    "input sentence": "how did it ever get made ?",
+    "max interaction set": [
+        1,
+        2
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-07 11:17",
+    "label": "-1",
+    "prediction": "0.00011544280278030783",
+    "baseline model": "0.8447302579879761",
+    "baseline game": "0.7319080829620361",
+    "mobius sum": "0.11293781269341707",
+    "sentence": "lame , haphazard teen comedy .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 453,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

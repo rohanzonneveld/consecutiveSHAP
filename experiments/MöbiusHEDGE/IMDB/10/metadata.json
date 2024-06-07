@@ -1,0 +1,24 @@
+{
+    "time": "2024-05-28 14:09",
+    "label": "1",
+    "prediction": "0.9980030655860901",
+    "baseline model": "0.8909936547279358",
+    "baseline game": "0.8764540627598763",
+    "mobius sum": "1.0125422745477408",
+    "sentence": "absolutely fantastic! whatever i say wouldn't do this underrated movie the justice it deserves. watch it now! fantastic! ",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 10,
+    "input sentence": "absolutely fantastic! whatever i say wouldn't do this underrated movie the justice it deserves. watch it now! fantastic! ",
+    "max interaction set": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+    ]
+}

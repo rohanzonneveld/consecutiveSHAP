@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 10:55",
+    "label": "-1",
+    "prediction": "0.017605196684598923",
+    "baseline model": "0.847303569316864",
+    "sentence": "then lower them a bit more .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 164,
+    "input sentence": "then lower them a bit more .",
+    "max interaction set": [
+        2,
+        3
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 11:00",
+    "label": "-1",
+    "prediction": "0.0021648153197020292",
+    "baseline model": "0.847303569316864",
+    "sentence": "demands too much of most viewers .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 370,
+    "input sentence": "demands too much of most viewers .",
+    "max interaction set": [
+        4,
+        5
+    ]
+}

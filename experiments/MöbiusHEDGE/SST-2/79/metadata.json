@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:12",
+    "label": "-1",
+    "prediction": "0.9990571141242981",
+    "baseline model": "0.8583206534385681",
+    "baseline game": "0.9113223552703857",
+    "mobius sum": "0.9460554081015289",
+    "sentence": "thoughtful , provocative and entertaining .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 79,
+    "max interaction set": [
+        1,
+        2,
+        3
+    ]
+}

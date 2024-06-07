@@ -1,0 +1,12 @@
+{
+    "time": "2024-06-05 17:08",
+    "label": "-1",
+    "prediction": "0.00021072346135042608",
+    "baseline model": "[0.8796795]",
+    "sentence": "this film 's relationship to actual tension is the same as what christmas-tree flocking in a spray can is to actual snow : a poor -- if durable -- imitation .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 1,
+    "input sentence": "this film 's relationship to actual tension is the same as what christmas-tree flocking in a spray can is to actual snow : a poor -- if durable -- imitation ."
+}

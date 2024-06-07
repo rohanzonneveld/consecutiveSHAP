@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:15",
+    "label": "-1",
+    "prediction": "0.9938480257987976",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.8100375384092331",
+    "mobius sum": "1.0230757277458906",
+    "sentence": "you 've seen them a million times .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 255,
+    "max interaction set": [
+        7,
+        8
+    ]
+}

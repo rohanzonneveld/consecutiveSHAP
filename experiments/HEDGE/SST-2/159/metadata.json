@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 10:55",
+    "label": "-1",
+    "prediction": "0.9991868138313293",
+    "baseline model": "0.8447302579879761",
+    "sentence": "( a ) rare , beautiful film .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 159,
+    "input sentence": "( a ) rare , beautiful film .",
+    "max interaction set": [
+        5,
+        6
+    ]
+}

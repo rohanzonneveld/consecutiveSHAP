@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:21",
+    "label": "-1",
+    "prediction": "0.04623612388968468",
+    "baseline model": "0.8583206534385681",
+    "baseline game": "0.9070408344268799",
+    "mobius sum": "-0.002484192722477019",
+    "sentence": "almost everything else is wan .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 785,
+    "max interaction set": [
+        3,
+        4
+    ]
+}

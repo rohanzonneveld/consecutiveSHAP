@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:11",
+    "label": "-1",
+    "prediction": "0.00010548054706305265",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.6530714631080627",
+    "mobius sum": "0.19433754868805408",
+    "sentence": "it 's just incredibly dull .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 19,
+    "max interaction set": [
+        4,
+        5
+    ]
+}

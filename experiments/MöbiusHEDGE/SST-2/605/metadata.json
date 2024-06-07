@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-07 11:18",
+    "label": "-1",
+    "prediction": "0.9989423155784607",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.8041921854019165",
+    "mobius sum": "1.0420537125319242",
+    "sentence": "eventually , it wins you over .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 605,
+    "max interaction set": [
+        3,
+        4,
+        5
+    ]
+}

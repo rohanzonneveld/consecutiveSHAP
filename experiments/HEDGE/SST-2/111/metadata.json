@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 10:53",
+    "label": "-1",
+    "prediction": "0.9989312291145325",
+    "baseline model": "0.8392652273178101",
+    "sentence": "woo 's fights have a distinct flair .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 111,
+    "input sentence": "woo 's fights have a distinct flair .",
+    "max interaction set": [
+        6,
+        7,
+        8
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 11:16",
+    "label": "-1",
+    "prediction": "0.00014427321730181575",
+    "baseline model": "0.8392652273178101",
+    "baseline game": "0.7203729748725891",
+    "mobius sum": "0.11903658509254456",
+    "sentence": "it 's an awfully derivative story .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 381,
+    "max interaction set": [
+        6,
+        7
+    ]
+}
