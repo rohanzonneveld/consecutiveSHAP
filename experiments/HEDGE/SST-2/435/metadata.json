@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 13:52",
+    "label": "-1",
+    "prediction": "0.00014709896640852094",
+    "baseline model": "0.8419315218925476",
+    "sentence": "pretentious editing ruins a potentially terrific flick .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 435,
+    "max interaction set": [
+        2,
+        3,
+        4
+    ],
+    "runtime": 46
+}

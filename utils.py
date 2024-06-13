@@ -318,7 +318,7 @@ class HEDGE:
 
         words = self.data[0, self.pruning_idx:, 0]
         nwords = len(words)
-        fig, ax = plt.subplots(figsize=(nwords, nwords/2))
+        fig, ax = plt.subplots(figsize=(nwords+2, nwords/2))
         ax.xaxis.set_visible(False)
 
         ylabels = ['Step '+str(idx) for idx in range(self.max_level+1)] + ['Baseline']

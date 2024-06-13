@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 15:34",
+    "label": "-1",
+    "prediction": "0.00036799750523641706",
+    "baseline model": "0.8936719298362732",
+    "baseline game": "0.9542457461357117",
+    "mobius sum": "-0.06020815670490265",
+    "sentence": "no number of fantastic sets , extras , costumes and spectacular locales can disguise the emptiness at the center of the story .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 44,
+    "max interaction set": [
+        7,
+        8,
+        9,
+        10
+    ]
+}

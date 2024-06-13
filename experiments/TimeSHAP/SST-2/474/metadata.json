@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:30",
+    "label": "-1",
+    "prediction": "0.5873875617980957",
+    "baseline model": "[0.84730357]",
+    "sentence": "never ( sinks ) into exploitation .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 474
+}

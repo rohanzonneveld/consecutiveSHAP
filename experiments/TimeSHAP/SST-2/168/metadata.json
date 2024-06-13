@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:22",
+    "label": "-1",
+    "prediction": "0.9990465044975281",
+    "baseline model": "[0.84193152]",
+    "sentence": "an elegant , exquisitely modulated psychological thriller .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 168
+}

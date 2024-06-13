@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:33",
+    "label": "-1",
+    "prediction": "0.00021416100207716227",
+    "baseline model": "0.8773553967475891",
+    "baseline game": "1.0223217606544495",
+    "mobius sum": "-0.14479592442512512",
+    "sentence": "a bigger holiday downer than your end-of-year 401 ( k ) statement .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 41,
+    "max interaction set": [
+        5,
+        6
+    ]
+}

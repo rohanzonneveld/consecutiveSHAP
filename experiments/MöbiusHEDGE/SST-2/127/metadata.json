@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 15:44",
+    "label": "-1",
+    "prediction": "0.00011990345956292003",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.7325016260147095",
+    "mobius sum": "0.10948587348684669",
+    "sentence": "much-anticipated and ultimately lackluster movie .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 127,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]
+}

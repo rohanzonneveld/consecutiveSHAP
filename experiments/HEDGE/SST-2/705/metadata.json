@@ -1,0 +1,15 @@
+{
+    "time": "2024-06-07 15:17",
+    "label": "-1",
+    "prediction": "0.997509241104126",
+    "baseline model": "0.7047262787818909",
+    "sentence": "good actress .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 705,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

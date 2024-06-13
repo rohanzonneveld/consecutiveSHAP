@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:57",
+    "label": "-1",
+    "prediction": "0.9991544485092163",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8457040786743164",
+    "mobius sum": "1.0023690238595009",
+    "sentence": "very solid , very watchable first feature for director peter sheridan",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 452,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

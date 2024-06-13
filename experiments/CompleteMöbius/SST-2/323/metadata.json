@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:04",
+    "label": "-1",
+    "prediction": "0.001071117352694273",
+    "baseline model": "[0.84551746]",
+    "sentence": "the film is really not so much bad as bland .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 323,
+    "nsamples": 256,
+    "runtime": 11
+}

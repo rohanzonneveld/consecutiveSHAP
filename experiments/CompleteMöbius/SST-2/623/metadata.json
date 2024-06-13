@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:16",
+    "label": "-1",
+    "prediction": "0.008171260356903076",
+    "baseline model": "[0.85650122]",
+    "sentence": "you 're better off staying home and watching the x-files .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 623,
+    "nsamples": 256,
+    "runtime": 11
+}

@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:31",
+    "label": "-1",
+    "prediction": "0.997671902179718",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.7235385030508041",
+    "mobius sum": "1.119640415534377",
+    "sentence": "a model of what films like this should be like .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 33,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}

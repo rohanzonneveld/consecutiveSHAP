@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:20",
+    "label": "-1",
+    "prediction": "0.998494029045105",
+    "baseline model": "[0.83926523]",
+    "sentence": "the tenderness of the piece is still intact .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 743,
+    "nsamples": 256,
+    "runtime": 10
+}

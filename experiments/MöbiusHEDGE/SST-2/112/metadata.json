@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:43",
+    "label": "-1",
+    "prediction": "0.995618999004364",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.9063719660043716",
+    "mobius sum": "0.9453648957423866",
+    "sentence": "he has not learned that storytelling is what the movies are about .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 112,
+    "max interaction set": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

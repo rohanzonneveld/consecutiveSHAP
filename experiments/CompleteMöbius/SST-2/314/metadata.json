@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:03",
+    "label": "-1",
+    "prediction": "0.0048652514815330505",
+    "baseline model": "[0.84891689]",
+    "sentence": "a mostly tired retread of several other mob tales .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 314,
+    "nsamples": 256,
+    "runtime": 11
+}

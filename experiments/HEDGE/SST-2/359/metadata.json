@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 13:41",
+    "label": "-1",
+    "prediction": "0.15115727484226227",
+    "baseline model": "0.8455174565315247",
+    "sentence": "has the feel of an unedited personal journal .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 359,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "runtime": 48
+}

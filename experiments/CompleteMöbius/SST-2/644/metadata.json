@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:16",
+    "label": "-1",
+    "prediction": "0.0003592082066461444",
+    "baseline model": "[0.85832065]",
+    "sentence": "the central story lacks punch .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 644,
+    "nsamples": 256,
+    "runtime": 2
+}

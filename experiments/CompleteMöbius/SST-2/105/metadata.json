@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:53",
+    "label": "-1",
+    "prediction": "0.00019823845650535077",
+    "baseline model": "[0.84551746]",
+    "sentence": "the story ... is moldy and obvious .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 105,
+    "nsamples": 256,
+    "runtime": 10
+}

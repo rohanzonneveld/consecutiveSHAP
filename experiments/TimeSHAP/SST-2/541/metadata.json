@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:34",
+    "label": "-1",
+    "prediction": "0.9961936473846436",
+    "baseline model": "[0.85650122]",
+    "sentence": "warmed-over tarantino by way of wannabe elmore leonard .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 541
+}

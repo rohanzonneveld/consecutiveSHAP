@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:48",
+    "label": "-1",
+    "prediction": "0.00031143901287578046",
+    "baseline model": "[0.84891689]",
+    "sentence": "this is junk food cinema at its greasiest .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 9,
+    "nsamples": 256,
+    "runtime": 11
+}

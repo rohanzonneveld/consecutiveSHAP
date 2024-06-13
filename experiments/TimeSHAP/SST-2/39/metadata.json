@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:18",
+    "label": "-1",
+    "prediction": "0.00016744360618758947",
+    "baseline model": "[0.8561182]",
+    "sentence": "verbinski substitutes atmosphere for action , tedium for thrills .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 39
+}

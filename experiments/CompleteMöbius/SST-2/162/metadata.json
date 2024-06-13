@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:56",
+    "label": "-1",
+    "prediction": "0.00020982704882044345",
+    "baseline model": "[0.86150849]",
+    "sentence": "the screenplay sabotages the movie 's strengths at almost every juncture .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 162,
+    "nsamples": 256,
+    "runtime": 11
+}

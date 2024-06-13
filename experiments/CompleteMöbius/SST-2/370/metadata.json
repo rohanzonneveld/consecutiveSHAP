@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:06",
+    "label": "-1",
+    "prediction": "0.0021648153197020292",
+    "baseline model": "[0.84730357]",
+    "sentence": "demands too much of most viewers .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 370,
+    "nsamples": 256,
+    "runtime": 5
+}

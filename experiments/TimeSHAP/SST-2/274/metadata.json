@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:26",
+    "label": "-1",
+    "prediction": "0.15569476783275604",
+    "baseline model": "[0.86150849]",
+    "sentence": "a bowel-curdling , heart-stopping recipe for terror .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 274
+}

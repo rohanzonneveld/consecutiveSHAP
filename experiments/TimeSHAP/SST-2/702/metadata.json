@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:38",
+    "label": "-1",
+    "prediction": "0.9933633804321289",
+    "baseline model": "[0.86150849]",
+    "sentence": "as green-guts monster movies go , it 's a beaut .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 702
+}

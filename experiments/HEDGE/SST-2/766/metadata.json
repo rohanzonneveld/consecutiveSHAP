@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 15:20",
+    "label": "-1",
+    "prediction": "0.00023938080994412303",
+    "baseline model": "0.8513853549957275",
+    "sentence": "just a bloody mess .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 766,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:56",
+    "label": "-1",
+    "prediction": "0.1257745921611786",
+    "baseline model": "[0.84473026]",
+    "sentence": "not even the hanson brothers can save it",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 163,
+    "nsamples": 256,
+    "runtime": 10
+}

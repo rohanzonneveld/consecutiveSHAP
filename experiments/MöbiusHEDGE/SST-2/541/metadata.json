@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:59",
+    "label": "-1",
+    "prediction": "0.9961936473846436",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.85642309486866",
+    "mobius sum": "0.996277941390872",
+    "sentence": "warmed-over tarantino by way of wannabe elmore leonard .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 541,
+    "max interaction set": [
+        11,
+        12
+    ]
+}

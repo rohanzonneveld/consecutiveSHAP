@@ -1,0 +1,26 @@
+{
+    "time": "2024-06-10 15:35",
+    "label": "-1",
+    "prediction": "0.0022618381772190332",
+    "baseline model": "0.8814777731895447",
+    "baseline game": "0.9021572470664978",
+    "mobius sum": "-0.018427444621920586",
+    "sentence": "it would n't be my preferred way of spending 100 minutes or $ 7.00 .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 48,
+    "max interaction set": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:55",
+    "label": "-1",
+    "prediction": "0.9983938336372375",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.7839186489582062",
+    "mobius sum": "1.0564090656116605",
+    "sentence": "the smartest bonehead comedy of the summer .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 407,
+    "max interaction set": [
+        3,
+        4
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:13",
+    "label": "-1",
+    "prediction": "0.0003638736961875111",
+    "baseline model": "[0.84891689]",
+    "sentence": "most of the action setups are incoherent .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 523,
+    "nsamples": 256,
+    "runtime": 11
+}

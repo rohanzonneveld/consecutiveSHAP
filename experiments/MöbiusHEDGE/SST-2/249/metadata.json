@@ -1,0 +1,28 @@
+{
+    "time": "2024-06-10 15:49",
+    "label": "-1",
+    "prediction": "0.9992235898971558",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.9144450053572655",
+    "mobius sum": "0.9412824905011803",
+    "sentence": "a marvellous journey from childhood idealism to adolescent self-absorption .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 249,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+    ]
+}

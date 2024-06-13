@@ -1,0 +1,33 @@
+{
+    "time": "2024-06-10 15:26",
+    "label": "-1",
+    "prediction": "0.011073382571339607",
+    "baseline model": "0.8797289729118347",
+    "baseline game": "0.8736771941184998",
+    "mobius sum": "0.017125697806477547",
+    "sentence": "it helps that lil bow wow ... tones down his pint-sized gangsta act to play someone who resembles a real kid .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 11,
+    "max interaction set": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+    ]
+}

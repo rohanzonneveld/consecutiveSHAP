@@ -1,0 +1,26 @@
+{
+    "time": "2024-06-10 15:29",
+    "label": "-1",
+    "prediction": "0.0007304539321921766",
+    "baseline model": "0.8838199377059937",
+    "baseline game": "0.9387879371643066",
+    "mobius sum": "-0.0542378849349916",
+    "sentence": "with spy kids 2 : the island of lost dreams writer/director/producer robert rodriguez has cobbled together a film that feels like a sugar high gone awry .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 24,
+    "max interaction set": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ]
+}

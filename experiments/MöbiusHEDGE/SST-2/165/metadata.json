@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:45",
+    "label": "-1",
+    "prediction": "0.0007336504640989006",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "1.0048351287841797",
+    "mobius sum": "-0.14794072462245822",
+    "sentence": "the truth is that the truth about charlie gets increasingly tiresome .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 165,
+    "max interaction set": [
+        10,
+        11
+    ]
+}

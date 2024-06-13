@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:49",
+    "label": "-1",
+    "prediction": "0.15569476783275604",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.917681097984314",
+    "mobius sum": "0.09952806308865547",
+    "sentence": "a bowel-curdling , heart-stopping recipe for terror .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 274,
+    "max interaction set": [
+        9,
+        10,
+        11
+    ]
+}

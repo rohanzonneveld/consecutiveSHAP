@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 16:04",
+    "label": "-1",
+    "prediction": "0.9991033673286438",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.7907768040895462",
+    "mobius sum": "1.0538379475474358",
+    "sentence": "sharp , lively , funny and ultimately sobering film .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 716,
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ]
+}

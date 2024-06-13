@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:16",
+    "label": "-1",
+    "prediction": "0.4873661696910858",
+    "baseline model": "[0.84891689]",
+    "sentence": "you 'll be more entertained getting hit by a bus .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 658,
+    "nsamples": 256,
+    "runtime": 11
+}

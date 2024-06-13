@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:24",
+    "label": "-1",
+    "prediction": "0.00026069971499964595",
+    "baseline model": "[0.84730357]",
+    "sentence": "barely goes beyond comic book status .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 50
+}

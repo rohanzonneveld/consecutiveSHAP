@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 13:37",
+    "label": "-1",
+    "prediction": "0.0005475619691424072",
+    "baseline model": "0.8419315218925476",
+    "sentence": "does n't amount to much of anything .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 339,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ],
+    "runtime": 44
+}

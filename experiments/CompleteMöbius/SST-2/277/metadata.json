@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:02",
+    "label": "-1",
+    "prediction": "0.0024618194438517094",
+    "baseline model": "[0.84551746]",
+    "sentence": "after that , it just gets stupid and maudlin .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 277,
+    "nsamples": 256,
+    "runtime": 11
+}

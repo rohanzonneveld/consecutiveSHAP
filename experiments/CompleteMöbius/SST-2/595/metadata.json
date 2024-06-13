@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:14",
+    "label": "-1",
+    "prediction": "0.06545455008745193",
+    "baseline model": "[0.86150849]",
+    "sentence": "vile and tacky are the two best adjectives to describe ghost ship .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 595,
+    "nsamples": 256,
+    "runtime": 12
+}

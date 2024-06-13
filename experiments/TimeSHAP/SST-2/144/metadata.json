@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:26",
+    "label": "-1",
+    "prediction": "0.9989160299301147",
+    "baseline model": "[0.84730357]",
+    "sentence": "witty , touching and well paced .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 144
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:12",
+    "label": "-1",
+    "prediction": "0.0003503634361550212",
+    "baseline model": "[0.83926523]",
+    "sentence": "fails to bring as much to the table .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 503,
+    "nsamples": 256,
+    "runtime": 10
+}

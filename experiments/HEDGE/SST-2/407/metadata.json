@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 13:49",
+    "label": "-1",
+    "prediction": "0.9983938336372375",
+    "baseline model": "0.8419315218925476",
+    "sentence": "the smartest bonehead comedy of the summer .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 407,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "runtime": 56
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:50",
+    "label": "-1",
+    "prediction": "0.0001735911500873044",
+    "baseline model": "[0.84193152]",
+    "sentence": "it becomes gimmicky instead of compelling .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 37,
+    "nsamples": 256,
+    "runtime": 11
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:19",
+    "label": "-1",
+    "prediction": "0.9981971383094788",
+    "baseline model": "[0.84891689]",
+    "sentence": "jacquot 's tosca is a treat .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 65
+}

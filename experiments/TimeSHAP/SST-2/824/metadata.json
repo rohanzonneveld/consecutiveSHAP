@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:41",
+    "label": "-1",
+    "prediction": "0.9991814494132996",
+    "baseline model": "[0.84551746]",
+    "sentence": "hilarious , touching and wonderfully dyspeptic .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 824
+}

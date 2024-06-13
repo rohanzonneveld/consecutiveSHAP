@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 15:08",
+    "label": "-1",
+    "prediction": "0.9991264939308167",
+    "baseline model": "0.8615084886550903",
+    "sentence": "much of the way , though , this is a refreshingly novel ride .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 791,
+    "max interaction set": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "runtime": 157
+}

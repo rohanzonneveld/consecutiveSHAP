@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:11",
+    "label": "-1",
+    "prediction": "0.04156286641955376",
+    "baseline model": "[0.84473026]",
+    "sentence": "a harmless and mildly amusing family comedy .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 483,
+    "nsamples": 256,
+    "runtime": 10
+}

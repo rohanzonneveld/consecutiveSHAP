@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:48",
+    "label": "-1",
+    "prediction": "0.9940576553344727",
+    "baseline model": "[0.8561182]",
+    "sentence": "director rob marshall went out gunning to make a great one .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 3,
+    "nsamples": 256,
+    "runtime": 11
+}

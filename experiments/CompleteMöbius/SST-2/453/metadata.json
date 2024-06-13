@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:10",
+    "label": "-1",
+    "prediction": "0.00011544280278030783",
+    "baseline model": "[0.84473026]",
+    "sentence": "lame , haphazard teen comedy .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 453,
+    "nsamples": 256,
+    "runtime": 10
+}

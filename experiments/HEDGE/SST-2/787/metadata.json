@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:05",
+    "label": "-1",
+    "prediction": "0.9936528205871582",
+    "baseline model": "0.8615084886550903",
+    "sentence": "there has been much puzzlement among critics about what the election symbolizes .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 787,
+    "max interaction set": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+    ],
+    "runtime": 130
+}

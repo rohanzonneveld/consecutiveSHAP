@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-07 15:09",
+    "label": "-1",
+    "prediction": "0.06354708224534988",
+    "baseline model": "0.8447302579879761",
+    "sentence": "alas , it 's neither .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 420,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ]
+}

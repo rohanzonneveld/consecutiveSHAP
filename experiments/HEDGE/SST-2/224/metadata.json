@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-10 13:04",
+    "label": "-1",
+    "prediction": "0.005110030993819237",
+    "baseline model": "0.8561182022094727",
+    "sentence": "like mike does n't win any points for originality .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 224,
+    "max interaction set": [
+        8,
+        9
+    ],
+    "runtime": 90
+}

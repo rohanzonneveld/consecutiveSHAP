@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 13:38",
+    "label": "-1",
+    "prediction": "0.996843695640564",
+    "baseline model": "0.8455174565315247",
+    "sentence": "yeah , these flicks are just that damn good .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 346,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "runtime": 50
+}

@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 16:03",
+    "label": "-1",
+    "prediction": "0.20419485867023468",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.7342292070388794",
+    "mobius sum": "0.31188277062028646",
+    "sentence": "i tried to read the time on my watch .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 678,
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}

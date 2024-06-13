@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 16:03",
+    "label": "-1",
+    "prediction": "0.9988646507263184",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.7581157833337784",
+    "mobius sum": "1.0896654790267348",
+    "sentence": "the film often achieves a mesmerizing poetry .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 695,
+    "max interaction set": [
+        8,
+        9
+    ]
+}

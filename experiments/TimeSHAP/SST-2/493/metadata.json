@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:30",
+    "label": "-1",
+    "prediction": "0.9991402626037598",
+    "baseline model": "[0.85138535]",
+    "sentence": "a vivid cinematic portrait .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 493
+}

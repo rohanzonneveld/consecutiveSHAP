@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 15:25",
+    "label": "-1",
+    "prediction": "0.0016294920351356268",
+    "baseline model": "0.8793521523475647",
+    "baseline game": "0.9815228581428528",
+    "mobius sum": "-0.10054445266723633",
+    "sentence": "none of this violates the letter of behan 's book , but missing is its spirit , its ribald , full-throated humor .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 6,
+    "max interaction set": [
+        18,
+        19,
+        20,
+        21,
+        22
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:36",
+    "label": "-1",
+    "prediction": "0.0006195498863235116",
+    "baseline model": "0.8779380917549133",
+    "baseline game": "0.935113787651062",
+    "mobius sum": "-0.05655623506754637",
+    "sentence": "for all its highfalutin title and corkscrew narrative , the movie turns out to be not much more than a shaggy human tale .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 52,
+    "max interaction set": [
+        14,
+        15
+    ]
+}

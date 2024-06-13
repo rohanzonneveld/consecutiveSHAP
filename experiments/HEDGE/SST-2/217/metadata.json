@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 13:03",
+    "label": "-1",
+    "prediction": "0.00015499877918045968",
+    "baseline model": "0.8565012216567993",
+    "sentence": "a painfully leaden film destined for pre-dawn cable television slots .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 217,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "runtime": 67
+}

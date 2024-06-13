@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 16:04",
+    "label": "-1",
+    "prediction": "0.0002783906238619238",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "1.0120819211006165",
+    "mobius sum": "-0.15567725710570812",
+    "sentence": "still , this thing feels flimsy and ephemeral .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 707,
+    "max interaction set": [
+        6,
+        7
+    ]
+}

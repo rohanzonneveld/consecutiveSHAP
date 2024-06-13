@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 14:18",
+    "label": "-1",
+    "prediction": "0.0020411652512848377",
+    "baseline model": "0.8489168882369995",
+    "sentence": "lacks heart , depth and , most of all , purpose .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 551,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "runtime": 64
+}

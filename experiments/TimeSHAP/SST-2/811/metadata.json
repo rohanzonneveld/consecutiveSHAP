@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:41",
+    "label": "-1",
+    "prediction": "0.0003976027655880898",
+    "baseline model": "[0.84891689]",
+    "sentence": "there is not an ounce of honesty in the entire production .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 811
+}

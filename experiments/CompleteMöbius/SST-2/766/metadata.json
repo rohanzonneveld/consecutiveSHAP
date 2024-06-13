@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:21",
+    "label": "-1",
+    "prediction": "0.00023938080994412303",
+    "baseline model": "[0.85138535]",
+    "sentence": "just a bloody mess .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 766,
+    "nsamples": 256,
+    "runtime": 1
+}

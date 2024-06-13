@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 15:32",
+    "label": "-1",
+    "prediction": "0.9987878203392029",
+    "baseline model": "0.8842774033546448",
+    "baseline game": "0.8993014842271805",
+    "mobius sum": "0.983762530144304",
+    "sentence": "doug liman , the director of bourne , directs the traffic well , gets a nice wintry look from his locations , absorbs us with the movie 's spycraft and uses damon 's ability to be focused and sincere .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 35,
+    "max interaction set": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ]
+}

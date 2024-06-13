@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:43",
+    "label": "-1",
+    "prediction": "0.03897713124752045",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8691936135292053",
+    "mobius sum": "0.01870078407227993",
+    "sentence": "despite some gulps the film is a fuzzy huggy .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 114,
+    "max interaction set": [
+        5,
+        6
+    ]
+}

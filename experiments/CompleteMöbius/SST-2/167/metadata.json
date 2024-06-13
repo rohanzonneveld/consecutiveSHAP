@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:56",
+    "label": "-1",
+    "prediction": "0.975526750087738",
+    "baseline model": "[0.8561182]",
+    "sentence": "a deviant topical comedy which is funny from start to finish .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 167,
+    "nsamples": 256,
+    "runtime": 11
+}

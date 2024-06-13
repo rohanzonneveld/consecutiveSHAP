@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:27",
+    "label": "-1",
+    "prediction": "0.00019637597142718732",
+    "baseline model": "[0.86150849]",
+    "sentence": "enough trivializes an important crisis , reduces it to an almost comic embarrassment .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 296
+}

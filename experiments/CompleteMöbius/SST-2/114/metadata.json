@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:53",
+    "label": "-1",
+    "prediction": "0.03897713124752045",
+    "baseline model": "[0.84891689]",
+    "sentence": "despite some gulps the film is a fuzzy huggy .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 114,
+    "nsamples": 256,
+    "runtime": 11
+}

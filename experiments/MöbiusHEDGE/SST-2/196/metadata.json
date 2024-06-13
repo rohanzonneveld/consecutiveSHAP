@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:47",
+    "label": "-1",
+    "prediction": "0.9989612102508545",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.7463847249746323",
+    "mobius sum": "1.1087263328954577",
+    "sentence": "occasionally melodramatic , it 's also extremely effective .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 196,
+    "max interaction set": [
+        10,
+        11
+    ]
+}

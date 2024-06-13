@@ -1,0 +1,28 @@
+{
+    "time": "2024-06-10 15:57",
+    "label": "-1",
+    "prediction": "0.000928378663957119",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.8733379244804382",
+    "mobius sum": "-0.015901523642241955",
+    "sentence": "i watched the brainless insanity of no such thing with mounting disbelief .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 463,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

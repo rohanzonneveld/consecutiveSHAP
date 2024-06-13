@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 15:25",
+    "label": "-1",
+    "prediction": "0.999097466468811",
+    "baseline model": "0.8856372237205505",
+    "baseline game": "0.9192872941493988",
+    "mobius sum": "0.9654536431189626",
+    "sentence": "although it bangs a very cliched drum at times , this crowd-pleaser 's fresh dialogue , energetic music , and good-natured spunk are often infectious .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 7,
+    "max interaction set": [
+        26,
+        27,
+        28,
+        29
+    ]
+}

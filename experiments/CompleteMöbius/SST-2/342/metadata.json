@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:05",
+    "label": "-1",
+    "prediction": "0.015101933851838112",
+    "baseline model": "[0.85832065]",
+    "sentence": "so what is the point ?",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 342,
+    "nsamples": 256,
+    "runtime": 2
+}

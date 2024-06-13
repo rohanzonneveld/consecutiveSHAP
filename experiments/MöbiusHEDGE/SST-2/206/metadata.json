@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 15:48",
+    "label": "-1",
+    "prediction": "0.9991631507873535",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8733483254909515",
+    "mobius sum": "0.9873232711106539",
+    "sentence": "a historical epic with the courage of its convictions about both scope and detail .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 206,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ]
+}

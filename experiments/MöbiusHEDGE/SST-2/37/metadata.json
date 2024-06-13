@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:32",
+    "label": "-1",
+    "prediction": "0.0001735911500873044",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.8048918843269348",
+    "mobius sum": "0.03721744194626808",
+    "sentence": "it becomes gimmicky instead of compelling .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 37,
+    "max interaction set": [
+        6,
+        7,
+        8
+    ]
+}

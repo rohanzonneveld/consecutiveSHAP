@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-10 13:53",
+    "label": "-1",
+    "prediction": "0.7556095123291016",
+    "baseline model": "0.8561182022094727",
+    "sentence": "like a south-of-the-border melrose place .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 437,
+    "max interaction set": [
+        10,
+        11
+    ],
+    "runtime": 92
+}

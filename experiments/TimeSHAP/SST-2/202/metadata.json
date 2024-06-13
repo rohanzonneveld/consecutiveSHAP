@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:24",
+    "label": "-1",
+    "prediction": "0.15502241253852844",
+    "baseline model": "[0.84891689]",
+    "sentence": "even the unwatchable soapdish is more original .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 202
+}

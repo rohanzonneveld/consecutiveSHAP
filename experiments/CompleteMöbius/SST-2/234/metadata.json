@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:00",
+    "label": "-1",
+    "prediction": "0.00013766657502856106",
+    "baseline model": "[0.83926523]",
+    "sentence": "an awkward and indigestible movie .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 234,
+    "nsamples": 256,
+    "runtime": 10
+}

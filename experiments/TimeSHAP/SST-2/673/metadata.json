@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:32",
+    "label": "-1",
+    "prediction": "0.0029504112899303436",
+    "baseline model": "[0.84473026]",
+    "sentence": "do n't waste your money .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 673
+}

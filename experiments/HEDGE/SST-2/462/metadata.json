@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-07 15:11",
+    "label": "-1",
+    "prediction": "0.06160401925444603",
+    "baseline model": "0.8392652273178101",
+    "sentence": "now , if it only had a brain .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 462,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:29",
+    "label": "-1",
+    "prediction": "0.0038976429495960474",
+    "baseline model": "[0.86150849]",
+    "sentence": "let 's cut to the consumer-advice bottom line : stay home .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 334
+}

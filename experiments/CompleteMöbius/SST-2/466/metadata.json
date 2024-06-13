@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:11",
+    "label": "-1",
+    "prediction": "0.008596479892730713",
+    "baseline model": "[0.83926523]",
+    "sentence": "some studio pizazz might have helped .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 466,
+    "nsamples": 256,
+    "runtime": 10
+}

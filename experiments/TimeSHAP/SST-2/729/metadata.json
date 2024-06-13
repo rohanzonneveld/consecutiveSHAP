@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:33",
+    "label": "-1",
+    "prediction": "0.0007664177101105452",
+    "baseline model": "[0.83926523]",
+    "sentence": "credibility sinks into a mire of sentiment .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 729
+}

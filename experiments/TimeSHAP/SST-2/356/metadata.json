@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:29",
+    "label": "-1",
+    "prediction": "0.998018741607666",
+    "baseline model": "[0.8561182]",
+    "sentence": "if you love motown music , you 'll love this documentary .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 356
+}

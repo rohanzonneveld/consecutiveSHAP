@@ -1,0 +1,27 @@
+{
+    "time": "2024-06-10 15:23",
+    "label": "-1",
+    "prediction": "0.00021072346135042608",
+    "baseline model": "0.8796795010566711",
+    "baseline game": "0.9223858118057251",
+    "mobius sum": "-0.04249575734138489",
+    "sentence": "this film 's relationship to actual tension is the same as what christmas-tree flocking in a spray can is to actual snow : a poor -- if durable -- imitation .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 1,
+    "max interaction set": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ]
+}

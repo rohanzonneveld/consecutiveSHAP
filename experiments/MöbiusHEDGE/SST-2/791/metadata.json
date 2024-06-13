@@ -1,0 +1,29 @@
+{
+    "time": "2024-06-10 16:06",
+    "label": "-1",
+    "prediction": "0.9991264939308167",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8896050155162811",
+    "mobius sum": "0.9710355903953314",
+    "sentence": "much of the way , though , this is a refreshingly novel ride .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 791,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+    ]
+}

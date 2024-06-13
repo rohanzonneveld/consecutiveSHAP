@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:35",
+    "label": "-1",
+    "prediction": "0.00044963188702240586",
+    "baseline model": "[0.85650122]",
+    "sentence": "a pleasurably jacked-up piece of action moviemaking .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 614
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:40",
+    "label": "-1",
+    "prediction": "0.00011783937952714041",
+    "baseline model": "[0.84551746]",
+    "sentence": "the movie quickly drags on becoming boring and predictable .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 783
+}

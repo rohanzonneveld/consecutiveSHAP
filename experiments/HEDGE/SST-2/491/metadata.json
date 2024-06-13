@@ -1,0 +1,15 @@
+{
+    "time": "2024-06-07 15:12",
+    "label": "-1",
+    "prediction": "0.9990932941436768",
+    "baseline model": "0.8513853549957275",
+    "sentence": "a very funny movie .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 491,
+    "max interaction set": [
+        0,
+        1
+    ]
+}

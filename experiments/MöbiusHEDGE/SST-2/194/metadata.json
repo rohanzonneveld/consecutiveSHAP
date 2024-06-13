@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 15:47",
+    "label": "-1",
+    "prediction": "0.0004867834213655442",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8723470568656921",
+    "mobius sum": "-0.010349683463573456",
+    "sentence": "if melville is creatively a great whale , this film is canned tuna .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 194,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ]
+}

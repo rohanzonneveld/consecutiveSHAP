@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:21",
+    "label": "-1",
+    "prediction": "0.9261486530303955",
+    "baseline model": "[0.84891689]",
+    "sentence": "men in black ii has sequel-itis something fierce .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 145
+}

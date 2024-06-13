@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:31",
+    "label": "-1",
+    "prediction": "0.9990555644035339",
+    "baseline model": "[0.84473026]",
+    "sentence": "a loving little film of considerable appeal .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 619
+}

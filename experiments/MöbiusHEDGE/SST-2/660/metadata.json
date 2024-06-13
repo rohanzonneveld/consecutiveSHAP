@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 16:02",
+    "label": "-1",
+    "prediction": "0.9991212487220764",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8631961196660995",
+    "mobius sum": "0.9974326470401138",
+    "sentence": "a sad , superior human comedy played out on the back roads of life .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 660,
+    "max interaction set": [
+        10,
+        11
+    ]
+}

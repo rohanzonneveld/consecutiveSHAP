@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:49",
+    "label": "-1",
+    "prediction": "0.00010548054706305265",
+    "baseline model": "[0.84730357]",
+    "sentence": "it 's just incredibly dull .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 19,
+    "nsamples": 256,
+    "runtime": 5
+}

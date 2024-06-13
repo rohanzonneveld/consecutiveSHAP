@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:31",
+    "label": "-1",
+    "prediction": "0.0001261737779714167",
+    "baseline model": "[0.84891689]",
+    "sentence": "a sermonizing and lifeless paean to teenage dullards .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 399
+}

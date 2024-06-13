@@ -1,0 +1,30 @@
+{
+    "time": "2024-06-10 15:26",
+    "label": "-1",
+    "prediction": "0.9934117197990417",
+    "baseline model": "0.8918254971504211",
+    "baseline game": "0.965010292828083",
+    "mobius sum": "0.9202691596001387",
+    "sentence": "watching the film is like reading a times portrait of grief that keeps shifting focus to the journalist who wrote it .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 12,
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+    ]
+}

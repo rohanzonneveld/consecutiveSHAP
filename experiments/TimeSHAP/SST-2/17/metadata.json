@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:12",
+    "label": "-1",
+    "prediction": "0.9991713762283325",
+    "baseline model": "[0.84891689]",
+    "sentence": "a remarkable 179-minute meditation on the nature of revolution .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 17
+}

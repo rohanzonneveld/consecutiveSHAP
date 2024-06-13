@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-12 16:59",
+    "label": "-1",
+    "prediction": "0.9988515377044678",
+    "baseline model": "0.847303569316864",
+    "sentence": "it never fails to engage us .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 1004,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ],
+    "runtime": 10
+}

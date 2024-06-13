@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:10",
+    "label": "-1",
+    "prediction": "0.9991544485092163",
+    "baseline model": "[0.84891689]",
+    "sentence": "very solid , very watchable first feature for director peter sheridan",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 452,
+    "nsamples": 256,
+    "runtime": 11
+}

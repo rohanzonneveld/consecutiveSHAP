@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 15:54",
+    "label": "-1",
+    "prediction": "0.15115727484226227",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "1.0660763382911682",
+    "mobius sum": "-0.0694091897457838",
+    "sentence": "has the feel of an unedited personal journal .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 359,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 15:42",
+    "label": "-1",
+    "prediction": "0.9988622665405273",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.7174064218997955",
+    "mobius sum": "1.1303684106096625",
+    "sentence": "gloriously goofy ( and gory ) midnight movie stuff .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 90,
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

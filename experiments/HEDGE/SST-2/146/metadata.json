@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 12:32",
+    "label": "-1",
+    "prediction": "0.17264196276664734",
+    "baseline model": "0.8615084886550903",
+    "sentence": "sometimes , nothing satisfies like old-fashioned swashbuckling .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 146,
+    "max interaction set": [
+        10,
+        11,
+        12
+    ],
+    "runtime": 130
+}

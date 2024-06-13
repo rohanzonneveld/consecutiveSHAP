@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:27",
+    "label": "-1",
+    "prediction": "0.9938480257987976",
+    "baseline model": "[0.83926523]",
+    "sentence": "you 've seen them a million times .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 255
+}

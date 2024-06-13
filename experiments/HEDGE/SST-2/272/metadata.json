@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 13:09",
+    "label": "-1",
+    "prediction": "0.7584027051925659",
+    "baseline model": "0.8489168882369995",
+    "sentence": "the movie exists for its soccer action and its fine acting .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 272,
+    "max interaction set": [
+        4,
+        5,
+        6
+    ],
+    "runtime": 59
+}

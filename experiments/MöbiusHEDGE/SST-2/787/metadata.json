@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 16:06",
+    "label": "-1",
+    "prediction": "0.9936528205871582",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8592902272939682",
+    "mobius sum": "0.995871352031827",
+    "sentence": "there has been much puzzlement among critics about what the election symbolizes .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 787,
+    "max interaction set": [
+        10,
+        11,
+        12,
+        13
+    ]
+}

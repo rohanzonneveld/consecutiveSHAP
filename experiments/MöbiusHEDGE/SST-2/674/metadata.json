@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 16:02",
+    "label": "-1",
+    "prediction": "0.9991883635520935",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.8668199479579926",
+    "mobius sum": "0.9884890364482999",
+    "sentence": "it 's a bittersweet and lyrical mix of elements .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 674,
+    "max interaction set": [
+        8,
+        9
+    ]
+}

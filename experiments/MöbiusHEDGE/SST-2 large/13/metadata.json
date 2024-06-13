@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:26",
+    "label": "-1",
+    "prediction": "0.9990693926811218",
+    "baseline model": "0.8875489830970764",
+    "baseline game": "0.8435522839426994",
+    "mobius sum": "1.0430716956034303",
+    "sentence": "moore 's performance impresses almost as much as her work with haynes in 1995 's safe .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 13,
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]
+}

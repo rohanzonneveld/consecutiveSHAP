@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:04",
+    "label": "-1",
+    "prediction": "0.9985257983207703",
+    "baseline model": "[0.84891689]",
+    "sentence": "but it pays a price for its intricate intellectual gamesmanship .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 315,
+    "nsamples": 256,
+    "runtime": 11
+}

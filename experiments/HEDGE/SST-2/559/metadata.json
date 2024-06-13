@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 14:21",
+    "label": "-1",
+    "prediction": "0.9791331887245178",
+    "baseline model": "0.8615084886550903",
+    "sentence": "it will come as no surprise that the movie is n't scary .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 559,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "runtime": 159
+}

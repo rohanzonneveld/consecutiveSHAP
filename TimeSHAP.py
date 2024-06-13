@@ -37,13 +37,17 @@ elif dataset == 'SST-2':
     X_test = pd.read_parquet('HEDGE\dataset\SST-2/test-00000-of-00001.parquet')
     
 
-for i in range(0, len(X_test['sentence'])):
-    print(f'Processing sentence {i} of {len(X_test["sentence"])}')
+for i in range(32,831):#len(X_test['sentence'])):
+    
     start = datetime.datetime.now()
     sentence_tag = i
     input_sentence = X_test['sentence'][sentence_tag]
     data = tokenizer.encode(input_sentence, add_special_tokens=False)
+    if len(data) <= 9 or len(data) > 15:
+        continue
     baseline = [tokenizer.mask_token_id]*len(data)
+
+    print(f'Processing sentence {i} of {len(X_test["sentence"])}')
 
     # convert to timeshap format
     data = np.expand_dims(np.array(data), axis=[0,2])

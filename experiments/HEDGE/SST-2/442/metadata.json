@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 13:54",
+    "label": "-1",
+    "prediction": "0.998729407787323",
+    "baseline model": "0.8489168882369995",
+    "sentence": "a pleasant enough comedy that should have found a summer place .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 442,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "runtime": 50
+}

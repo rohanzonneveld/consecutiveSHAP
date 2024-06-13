@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 15:52",
+    "label": "-1",
+    "prediction": "0.001071117352694273",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.5755538940429688",
+    "mobius sum": "0.27104439958930016",
+    "sentence": "the film is really not so much bad as bland .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 323,
+    "max interaction set": [
+        6,
+        7,
+        8,
+        9
+    ]
+}

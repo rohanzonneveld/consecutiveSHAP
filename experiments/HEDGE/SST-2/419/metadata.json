@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 13:50",
+    "label": "-1",
+    "prediction": "0.9991057515144348",
+    "baseline model": "0.8489168882369995",
+    "sentence": "thoughtful , even stinging at times , and lots of fun .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 419,
+    "max interaction set": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "runtime": 64
+}

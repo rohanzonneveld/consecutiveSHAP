@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:08",
+    "label": "-1",
+    "prediction": "0.00012132731353631243",
+    "baseline model": "[0.83926523]",
+    "sentence": "godawful boring slug of a movie .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 414,
+    "nsamples": 256,
+    "runtime": 10
+}

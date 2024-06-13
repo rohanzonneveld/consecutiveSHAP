@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:36",
+    "label": "-1",
+    "prediction": "0.0004233910294715315",
+    "baseline model": "0.8875489830970764",
+    "baseline game": "0.8395479321479797",
+    "mobius sum": "0.0483995471149683",
+    "sentence": "it delivers some chills and sustained unease , but flounders in its quest for deeper meaning .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 55,
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

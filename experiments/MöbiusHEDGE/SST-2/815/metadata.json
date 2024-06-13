@@ -1,0 +1,25 @@
+{
+    "time": "2024-06-10 16:06",
+    "label": "-1",
+    "prediction": "0.9389504790306091",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.8971378728747368",
+    "mobius sum": "0.8979325597174466",
+    "sentence": "there is n't a weak or careless performance amongst them .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 815,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

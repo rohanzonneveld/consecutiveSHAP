@@ -1,0 +1,30 @@
+{
+    "time": "2024-06-10 15:39",
+    "label": "-1",
+    "prediction": "0.00016149619477801025",
+    "baseline model": "0.8875489830970764",
+    "baseline game": "0.8877784013748169",
+    "mobius sum": "-6.38086348772049e-05",
+    "sentence": "aspires for the piquant but only really achieves a sort of ridiculous sourness .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 68,
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+    ]
+}

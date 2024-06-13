@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:32",
+    "label": "-1",
+    "prediction": "0.00016744360618758947",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.8275380730628967",
+    "mobius sum": "0.02874724753201008",
+    "sentence": "verbinski substitutes atmosphere for action , tedium for thrills .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 39,
+    "max interaction set": [
+        6,
+        7,
+        8
+    ]
+}

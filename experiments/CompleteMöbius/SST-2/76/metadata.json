@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:51",
+    "label": "-1",
+    "prediction": "0.0002165626356145367",
+    "baseline model": "[0.85650122]",
+    "sentence": "instead , we just get messy anger , a movie as personal therapy .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 76,
+    "nsamples": 256,
+    "runtime": 11
+}

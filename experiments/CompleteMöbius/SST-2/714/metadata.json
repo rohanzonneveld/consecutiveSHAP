@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:19",
+    "label": "-1",
+    "prediction": "0.9983880519866943",
+    "baseline model": "[0.85650122]",
+    "sentence": "about as satisfying and predictable as the fare at your local drive through .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 714,
+    "nsamples": 256,
+    "runtime": 11
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:55",
+    "label": "-1",
+    "prediction": "0.999121367931366",
+    "baseline model": "[0.84730357]",
+    "sentence": "i admired this work a lot .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 157,
+    "nsamples": 256,
+    "runtime": 4
+}

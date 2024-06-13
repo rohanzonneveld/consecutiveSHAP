@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 16:03",
+    "label": "-1",
+    "prediction": "0.9757595658302307",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.5748081803321838",
+    "mobius sum": "1.2427975665777922",
+    "sentence": "a whole lot foul , freaky and funny .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 687,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]
+}

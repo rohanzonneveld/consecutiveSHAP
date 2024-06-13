@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 15:19",
+    "label": "-1",
+    "prediction": "0.9963756203651428",
+    "baseline model": "0.847303569316864",
+    "sentence": "it has fun being grown up .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 745,
+    "max interaction set": [
+        0,
+        1,
+        2
+    ]
+}

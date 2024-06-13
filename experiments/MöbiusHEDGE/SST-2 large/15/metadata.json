@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:27",
+    "label": "-1",
+    "prediction": "0.999110758304596",
+    "baseline model": "0.8840640783309937",
+    "baseline game": "0.9788545295596123",
+    "mobius sum": "0.9043187038041651",
+    "sentence": "now trimmed by about 20 minutes , this lavish three-year-old production has enough grandeur and scale to satisfy as grown-up escapism .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 15,
+    "max interaction set": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

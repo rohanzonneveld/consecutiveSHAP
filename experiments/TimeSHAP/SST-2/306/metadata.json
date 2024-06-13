@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:27",
+    "label": "-1",
+    "prediction": "0.00011088955943705514",
+    "baseline model": "[0.84193152]",
+    "sentence": "a predictable and stereotypical little b-movie .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 306
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:02",
+    "label": "-1",
+    "prediction": "0.920405387878418",
+    "baseline model": "[0.85650122]",
+    "sentence": "the movie stays afloat thanks to its hallucinatory production design .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 287,
+    "nsamples": 256,
+    "runtime": 11
+}

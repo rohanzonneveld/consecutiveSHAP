@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:44",
+    "label": "-1",
+    "prediction": "0.9885048270225525",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.9260612577199936",
+    "mobius sum": "0.9079618314281106",
+    "sentence": "as an actor , the rock is aptly named .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 152,
+    "max interaction set": [
+        8,
+        9,
+        10
+    ]
+}

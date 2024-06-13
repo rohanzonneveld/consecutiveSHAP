@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:54",
+    "label": "-1",
+    "prediction": "0.00011990345956292003",
+    "baseline model": "[0.84193152]",
+    "sentence": "much-anticipated and ultimately lackluster movie .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 127,
+    "nsamples": 256,
+    "runtime": 10
+}

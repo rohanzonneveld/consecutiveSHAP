@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:41",
+    "label": "-1",
+    "prediction": "0.9974185228347778",
+    "baseline model": "[0.8561182]",
+    "sentence": "a modest pleasure that accomplishes its goals with ease and confidence .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 819
+}

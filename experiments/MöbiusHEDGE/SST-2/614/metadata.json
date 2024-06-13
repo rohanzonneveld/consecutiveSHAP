@@ -1,0 +1,28 @@
+{
+    "time": "2024-06-10 16:00",
+    "label": "-1",
+    "prediction": "0.00044963188702240586",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.7104678750038147",
+    "mobius sum": "0.1464761490933597",
+    "sentence": "a pleasurably jacked-up piece of action moviemaking .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 614,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

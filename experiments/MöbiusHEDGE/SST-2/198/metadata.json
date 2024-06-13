@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:47",
+    "label": "-1",
+    "prediction": "0.997866690158844",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.9058762937784195",
+    "mobius sum": "0.9481058404780924",
+    "sentence": "when it 's all wet , blue crush is highly enjoyable .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 198,
+    "max interaction set": [
+        8,
+        9,
+        10
+    ]
+}

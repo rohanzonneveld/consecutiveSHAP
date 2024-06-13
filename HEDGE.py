@@ -36,15 +36,17 @@ elif dataset == 'SST-2':
     X_test = pd.read_parquet('HEDGE\dataset\SST-2/test-00000-of-00001.parquet')
 
 
-for i in range(len(X_test['sentence'])):
-    print(f'Processing sentence {i} of {len(X_test["sentence"])}')
+for i in range(1004,1005):#len(X_test['sentence'])):
+    
     start = datetime.datetime.now()
     sentence_tag = i
     input_sentence = X_test['sentence'][sentence_tag]
     data = tokenizer.encode(input_sentence, add_special_tokens=False)
-    if len(data) > 9:
-        continue
+    # if len(data) <= 9 or len(data) > 15:
+    #     continue
     baseline = [tokenizer.mask_token_id]*len(data)
+
+    print(f'Processing sentence {i} of {len(X_test["sentence"])}')
 
     # convert to timeshap format
     data = np.expand_dims(np.array(data), axis=[0,2])
@@ -52,7 +54,6 @@ for i in range(len(X_test['sentence'])):
 
     hedge = HEDGE(f, data, baseline=baseline)
     hedge.shapley_topdown_tree()
-    # max_inter_set = hedge.find_highest_interaction()
 
     folder = f'experiments/HEDGE/{dataset}/{sentence_tag}'
     hedge.visualize_tree(tokenizer.ids_to_tokens, folder=folder, tag=sentence_tag)
@@ -61,6 +62,8 @@ for i in range(len(X_test['sentence'])):
     max_inter_set = phrase_list[0]
     importance = [fea[1] for fea in hedge.hier_tree[hedge.max_level]]
     importance.reverse() # other importance metrics are in order of timeshap so reversed
+    runtime = (datetime.datetime.now()-start).seconds
+    print(f"Processing sentence {i} took {runtime} seconds", end='\n\n')
 
     # save the results
     pd.DataFrame(importance, columns=['importance']).to_csv(f'{folder}/importance.csv', index=False)
@@ -73,6 +76,7 @@ for i in range(len(X_test['sentence'])):
                 'dataset': 'IMDB',
                 'mask_token': tokenizer.mask_token,
                 'sentence tag': sentence_tag,
-                'max interaction set': max_inter_set}
+                'max interaction set': max_inter_set,
+                'runtime': runtime,}
     json.dump(metadata, open(f'{folder}/metadata.json', 'w'), indent=4)
-    print(f"Processing sentence {i} took {(datetime.datetime.now()-start).seconds} seconds", end='\n\n')
+    

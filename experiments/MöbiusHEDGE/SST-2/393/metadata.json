@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:55",
+    "label": "-1",
+    "prediction": "0.9991260170936584",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.9283025488257408",
+    "mobius sum": "0.9273185580968857",
+    "sentence": "the spark of special anime magic here is unmistakable and hard to resist .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 393,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

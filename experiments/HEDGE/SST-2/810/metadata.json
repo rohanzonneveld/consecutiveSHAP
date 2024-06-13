@@ -1,0 +1,15 @@
+{
+    "time": "2024-06-07 15:22",
+    "label": "-1",
+    "prediction": "0.0018626491073518991",
+    "baseline model": "0.8392652273178101",
+    "sentence": "creepy but ultimately unsatisfying thriller .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 810,
+    "max interaction set": [
+        0,
+        1
+    ]
+}

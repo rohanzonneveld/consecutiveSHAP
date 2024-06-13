@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:48",
+    "label": "-1",
+    "prediction": "0.00015499877918045968",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.9246013760566711",
+    "mobius sum": "-0.06794529221951962",
+    "sentence": "a painfully leaden film destined for pre-dawn cable television slots .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 217,
+    "max interaction set": [
+        10,
+        11,
+        12
+    ]
+}

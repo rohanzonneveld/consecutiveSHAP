@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:51",
+    "label": "-1",
+    "prediction": "0.00031952420249581337",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8346551060676575",
+    "mobius sum": "0.014581166207790375",
+    "sentence": "a modest and messy metaphysical thriller offering more questions than answers .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 290,
+    "max interaction set": [
+        3,
+        4
+    ]
+}

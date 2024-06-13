@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 16:04",
+    "label": "-1",
+    "prediction": "0.9387190341949463",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.83877382427454",
+    "mobius sum": "0.9418872012756765",
+    "sentence": "still , i thought it could have been more .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 703,
+    "max interaction set": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}

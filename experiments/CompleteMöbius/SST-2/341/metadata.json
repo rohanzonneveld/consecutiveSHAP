@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:05",
+    "label": "-1",
+    "prediction": "0.00012152229464845732",
+    "baseline model": "[0.84193152]",
+    "sentence": "an instant candidate for worst movie of the year .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 341,
+    "nsamples": 256,
+    "runtime": 11
+}

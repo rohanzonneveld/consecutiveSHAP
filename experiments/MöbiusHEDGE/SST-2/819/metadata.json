@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 16:07",
+    "label": "-1",
+    "prediction": "0.9974185228347778",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.8766878843307495",
+    "mobius sum": "0.9768524370156229",
+    "sentence": "a modest pleasure that accomplishes its goals with ease and confidence .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 819,
+    "max interaction set": [
+        9,
+        10,
+        11,
+        12
+    ]
+}

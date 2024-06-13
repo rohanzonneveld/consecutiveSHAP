@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:21",
+    "label": "-1",
+    "prediction": "0.9885048270225525",
+    "baseline model": "[0.84551746]",
+    "sentence": "as an actor , the rock is aptly named .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 152
+}

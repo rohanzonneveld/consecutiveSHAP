@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:11",
+    "label": "-1",
+    "prediction": "0.9389504790306091",
+    "baseline model": "0.8561182022094727",
+    "sentence": "there is n't a weak or careless performance amongst them .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 815,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "runtime": 104
+}

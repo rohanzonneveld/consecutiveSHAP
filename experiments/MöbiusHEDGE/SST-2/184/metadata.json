@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:46",
+    "label": "-1",
+    "prediction": "0.008218557573854923",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.8389559984207153",
+    "mobius sum": "0.011198632419109344",
+    "sentence": "made by jackasses for jackasses .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 184,
+    "max interaction set": [
+        0,
+        1
+    ]
+}

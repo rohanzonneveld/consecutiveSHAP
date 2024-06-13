@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:54",
+    "label": "-1",
+    "prediction": "0.00011295074364170432",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.7730719447135925",
+    "mobius sum": "0.06895758584141731",
+    "sentence": "a benign but forgettable sci-fi diversion .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 371,
+    "max interaction set": [
+        3,
+        4
+    ]
+}

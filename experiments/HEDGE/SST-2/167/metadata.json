@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-10 12:40",
+    "label": "-1",
+    "prediction": "0.975526750087738",
+    "baseline model": "0.8561182022094727",
+    "sentence": "a deviant topical comedy which is funny from start to finish .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 167,
+    "max interaction set": [
+        7,
+        8
+    ],
+    "runtime": 98
+}

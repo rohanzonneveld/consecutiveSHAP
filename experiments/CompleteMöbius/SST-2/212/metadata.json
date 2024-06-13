@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:59",
+    "label": "-1",
+    "prediction": "0.9968273043632507",
+    "baseline model": "[0.85138535]",
+    "sentence": "well worth the time .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 212,
+    "nsamples": 256,
+    "runtime": 1
+}

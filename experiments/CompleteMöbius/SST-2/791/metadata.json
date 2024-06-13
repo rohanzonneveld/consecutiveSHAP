@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:23",
+    "label": "-1",
+    "prediction": "0.9991264939308167",
+    "baseline model": "[0.86150849]",
+    "sentence": "much of the way , though , this is a refreshingly novel ride .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 791,
+    "nsamples": 256,
+    "runtime": 12
+}

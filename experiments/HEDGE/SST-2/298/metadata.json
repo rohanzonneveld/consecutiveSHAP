@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 13:25",
+    "label": "-1",
+    "prediction": "0.9991812109947205",
+    "baseline model": "0.8561182022094727",
+    "sentence": "genuinely touching because it 's realistic about all kinds of love .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 298,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "runtime": 105
+}

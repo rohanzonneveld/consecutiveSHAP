@@ -1,0 +1,25 @@
+{
+    "time": "2024-06-10 15:32",
+    "label": "-1",
+    "prediction": "0.00047883944353088737",
+    "baseline model": "0.8856372237205505",
+    "baseline game": "0.9109880328178406",
+    "mobius sum": "-0.024875174276530743",
+    "sentence": "another big , dumb action movie in the vein of xxx , the transporter is riddled with plot holes big enough for its titular hero to drive his sleek black bmw through .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 36,
+    "max interaction set": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ]
+}

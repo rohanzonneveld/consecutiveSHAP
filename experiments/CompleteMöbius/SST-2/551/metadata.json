@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:14",
+    "label": "-1",
+    "prediction": "0.0020411652512848377",
+    "baseline model": "[0.84891689]",
+    "sentence": "lacks heart , depth and , most of all , purpose .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 551,
+    "nsamples": 256,
+    "runtime": 11
+}

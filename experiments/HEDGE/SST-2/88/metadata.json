@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 12:06",
+    "label": "-1",
+    "prediction": "0.02188701368868351",
+    "baseline model": "0.8565012216567993",
+    "sentence": "characters wander into predictably treacherous situations even though they should know better .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 88,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "runtime": 145
+}

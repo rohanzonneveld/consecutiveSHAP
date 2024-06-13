@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:29",
+    "label": "-1",
+    "prediction": "0.5513916611671448",
+    "baseline model": "0.8773553967475891",
+    "baseline game": "0.9299124777317047",
+    "mobius sum": "0.49885212536901236",
+    "sentence": "the best way to hope for any chance of enjoying this film is by lowering your expectations .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 26,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

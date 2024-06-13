@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:15",
+    "label": "-1",
+    "prediction": "0.0018283257959410548",
+    "baseline model": "[0.85650122]",
+    "sentence": "he simply presents his point of view that ayurveda works .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 622,
+    "nsamples": 256,
+    "runtime": 11
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:51",
+    "label": "-1",
+    "prediction": "0.01645551435649395",
+    "baseline model": "[0.83926523]",
+    "sentence": "the film 's center will not hold .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 67,
+    "nsamples": 256,
+    "runtime": 10
+}

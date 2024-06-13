@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:28",
+    "label": "-1",
+    "prediction": "0.999152660369873",
+    "baseline model": "[0.84473026]",
+    "sentence": "kinnear gives a tremendous performance .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 355
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:12",
+    "label": "-1",
+    "prediction": "0.0005784337408840656",
+    "baseline model": "[0.85650122]",
+    "sentence": "without september 11 , collateral damage would have been just another bad movie .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 513,
+    "nsamples": 256,
+    "runtime": 11
+}

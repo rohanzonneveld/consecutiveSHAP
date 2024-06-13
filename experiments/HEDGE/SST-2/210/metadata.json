@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 13:01",
+    "label": "-1",
+    "prediction": "0.9987660646438599",
+    "baseline model": "0.8419315218925476",
+    "sentence": "the movie has lots of dancing and fabulous music .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 210,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "runtime": 38
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:25",
+    "label": "-1",
+    "prediction": "0.005110030993819237",
+    "baseline model": "[0.8561182]",
+    "sentence": "like mike does n't win any points for originality .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 224
+}

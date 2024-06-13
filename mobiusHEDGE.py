@@ -36,27 +36,31 @@ elif dataset == 'SST-2':
     X_test = pd.read_parquet('HEDGE\dataset\SST-2/test-00000-of-00001.parquet')
 
 
-for i in range(835, len(X_test['sentence'])):
-    print(f'Processing sentence {i} of {len(X_test["sentence"])}')
+for i in range(19,20):#len(X_test['sentence'])
     start = datetime.datetime.now()
     sentence_tag = i
     input_sentence = X_test['sentence'][sentence_tag]
     data = tokenizer.encode(input_sentence, add_special_tokens=False)
-    if len(data) > 9:
-        continue
+    # if len(data) <= 9 or len(data) > 15:
+    #     continue
     baseline = [tokenizer.mask_token_id]*len(data)
-
+    # print(input_sentence)
+    
+    print(f'Processing sentence {i} of {len(X_test["sentence"])}')
+    
     # convert to timeshap format
     data = np.expand_dims(np.array(data), axis=[0,2])
     baseline = np.expand_dims(np.array(baseline), axis=[0,2])
 
     hedge = MobiusHEDGE(f, data, baseline=baseline)
     hedge.shapley_topdown_tree()
-    max_inter_set = hedge.find_highest_interaction()
 
     folder = f'experiments/MöbiusHEDGE/{dataset}/{sentence_tag}'
-    hedge.visualize_tree(tokenizer.ids_to_tokens, folder=folder, tag=sentence_tag)
-   
+    hedge.visualize_tree(tokenizer.ids_to_tokens, folder=folder, tag=sentence_tag)  
+    max_inter_set = hedge.find_highest_interaction()   
+    
+    runtime = (datetime.datetime.now()-start).seconds
+    print(f"Processing sentence {i} took {runtime} seconds", end='\n\n')
 
     # save the results
     pd.DataFrame(hedge.m.items(), columns=['term', 'value']).to_csv(f'{folder}/mobius_transforms.csv', index=False)
@@ -74,4 +78,4 @@ for i in range(835, len(X_test['sentence'])):
                 'sentence tag': sentence_tag,
                 'max interaction set': max_inter_set}
     json.dump(metadata, open(f'{folder}/metadata.json', 'w'), indent=4)
-    print(f"Processing sentence {i} took {(datetime.datetime.now()-start).seconds} seconds", end='\n\n')
+    

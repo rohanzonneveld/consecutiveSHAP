@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:23",
+    "label": "-1",
+    "prediction": "0.012010433711111546",
+    "baseline model": "[0.84730357]",
+    "sentence": "i hated every minute of it .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 807,
+    "nsamples": 256,
+    "runtime": 5
+}

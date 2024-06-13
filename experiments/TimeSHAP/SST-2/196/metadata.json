@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:24",
+    "label": "-1",
+    "prediction": "0.9989612102508545",
+    "baseline model": "[0.8561182]",
+    "sentence": "occasionally melodramatic , it 's also extremely effective .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 196
+}

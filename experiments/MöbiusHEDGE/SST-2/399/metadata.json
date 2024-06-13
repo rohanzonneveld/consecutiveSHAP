@@ -1,0 +1,26 @@
+{
+    "time": "2024-06-10 15:55",
+    "label": "-1",
+    "prediction": "0.0001261737779714167",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.7745556831359863",
+    "mobius sum": "0.07448317669332027",
+    "sentence": "a sermonizing and lifeless paean to teenage dullards .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 399,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ]
+}

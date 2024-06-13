@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:31",
+    "label": "-1",
+    "prediction": "0.0018217152683064342",
+    "baseline model": "[0.84193152]",
+    "sentence": "disturbingly superficial in its approach to the material .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 424
+}

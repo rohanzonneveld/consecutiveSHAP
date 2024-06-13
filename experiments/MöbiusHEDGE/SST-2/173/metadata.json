@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:46",
+    "label": "-1",
+    "prediction": "0.0005050242762081325",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.715980589389801",
+    "mobius sum": "0.1410305076278746",
+    "sentence": "has little on its mind aside from scoring points with drag gags .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 173,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

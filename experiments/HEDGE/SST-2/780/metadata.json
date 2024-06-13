@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:00",
+    "label": "-1",
+    "prediction": "0.9989233613014221",
+    "baseline model": "0.8455174565315247",
+    "sentence": "jir\u00ed hubac 's script is a gem .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 780,
+    "max interaction set": [
+        6,
+        7,
+        8
+    ],
+    "runtime": 48
+}

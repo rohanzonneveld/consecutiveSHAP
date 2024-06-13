@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 16:01",
+    "label": "-1",
+    "prediction": "0.008171260356903076",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.8873211741447449",
+    "mobius sum": "-0.022655127570033073",
+    "sentence": "you 're better off staying home and watching the x-files .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 623,
+    "max interaction set": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+    ]
+}

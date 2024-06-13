@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:12",
+    "label": "-1",
+    "prediction": "0.9990631937980652",
+    "baseline model": "[0.85650122]",
+    "sentence": "a well-made and often lovely depiction of the mysteries of friendship .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 5
+}

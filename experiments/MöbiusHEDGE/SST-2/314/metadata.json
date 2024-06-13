@@ -1,0 +1,26 @@
+{
+    "time": "2024-06-10 15:52",
+    "label": "-1",
+    "prediction": "0.0048652514815330505",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8296966552734375",
+    "mobius sum": "0.024086521938443184",
+    "sentence": "a mostly tired retread of several other mob tales .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 314,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

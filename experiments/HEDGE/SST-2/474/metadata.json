@@ -1,0 +1,15 @@
+{
+    "time": "2024-06-07 15:12",
+    "label": "-1",
+    "prediction": "0.5873875617980957",
+    "baseline model": "0.847303569316864",
+    "sentence": "never ( sinks ) into exploitation .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 474,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

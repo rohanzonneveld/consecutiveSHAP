@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 15:44",
+    "label": "-1",
+    "prediction": "0.9261486530303955",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8854662030935287",
+    "mobius sum": "0.8895993418991566",
+    "sentence": "men in black ii has sequel-itis something fierce .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 145,
+    "max interaction set": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

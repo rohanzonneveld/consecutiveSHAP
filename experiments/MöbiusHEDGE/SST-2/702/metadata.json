@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 16:03",
+    "label": "-1",
+    "prediction": "0.9933633804321289",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.9025251865386963",
+    "mobius sum": "0.9523457204923034",
+    "sentence": "as green-guts monster movies go , it 's a beaut .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 702,
+    "max interaction set": [
+        11,
+        12,
+        13,
+        14
+    ]
+}

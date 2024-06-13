@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 14:55",
+    "label": "-1",
+    "prediction": "0.5689106583595276",
+    "baseline model": "0.8615084886550903",
+    "sentence": "in its ragged , cheap and unassuming way , the movie works .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 731,
+    "max interaction set": [
+        7,
+        8,
+        9
+    ],
+    "runtime": 127
+}

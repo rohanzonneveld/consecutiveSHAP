@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:22",
+    "label": "-1",
+    "prediction": "0.9936528205871582",
+    "baseline model": "[0.86150849]",
+    "sentence": "there has been much puzzlement among critics about what the election symbolizes .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 787,
+    "nsamples": 256,
+    "runtime": 12
+}

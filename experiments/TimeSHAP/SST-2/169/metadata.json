@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:26",
+    "label": "-1",
+    "prediction": "0.9888222217559814",
+    "baseline model": "[0.70472628]",
+    "sentence": "brilliant ! '",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 169
+}

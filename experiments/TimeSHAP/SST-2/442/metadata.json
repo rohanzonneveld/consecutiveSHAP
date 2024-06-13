@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:32",
+    "label": "-1",
+    "prediction": "0.998729407787323",
+    "baseline model": "[0.84891689]",
+    "sentence": "a pleasant enough comedy that should have found a summer place .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 442
+}

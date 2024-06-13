@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 16:05",
+    "label": "-1",
+    "prediction": "0.999025821685791",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.8684758692979813",
+    "mobius sum": "0.9870357951149344",
+    "sentence": "offers a breath of the fresh air of true sophistication .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 768,
+    "max interaction set": [
+        6,
+        7
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:53",
+    "label": "-1",
+    "prediction": "0.998921275138855",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.7648860812187195",
+    "mobius sum": "1.0955671065021306",
+    "sentence": "merely as a technical , logistical feat , russian ark marks a cinematic milestone .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 327,
+    "max interaction set": [
+        0,
+        1
+    ]
+}

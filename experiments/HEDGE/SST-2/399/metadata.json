@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 13:48",
+    "label": "-1",
+    "prediction": "0.0001261737779714167",
+    "baseline model": "0.8489168882369995",
+    "sentence": "a sermonizing and lifeless paean to teenage dullards .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 399,
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "runtime": 67
+}

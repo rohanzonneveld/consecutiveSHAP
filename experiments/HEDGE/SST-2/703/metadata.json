@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 14:48",
+    "label": "-1",
+    "prediction": "0.9387190341949463",
+    "baseline model": "0.8419315218925476",
+    "sentence": "still , i thought it could have been more .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 703,
+    "max interaction set": [
+        1,
+        2,
+        3
+    ],
+    "runtime": 31
+}

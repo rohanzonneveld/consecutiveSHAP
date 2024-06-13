@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:26",
+    "label": "-1",
+    "prediction": "0.9991868138313293",
+    "baseline model": "[0.84473026]",
+    "sentence": "( a ) rare , beautiful film .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 159
+}

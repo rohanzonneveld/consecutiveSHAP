@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:52",
+    "label": "-1",
+    "prediction": "0.999164342880249",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.9181065559387207",
+    "mobius sum": "0.9371705164667219",
+    "sentence": "a film that is a portrait of grace in an imperfect world .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 318,
+    "max interaction set": [
+        9,
+        10,
+        11
+    ]
+}

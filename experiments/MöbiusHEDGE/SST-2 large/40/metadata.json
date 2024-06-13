@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:33",
+    "label": "-1",
+    "prediction": "0.9988433122634888",
+    "baseline model": "0.8814777731895447",
+    "baseline game": "0.8435388877987862",
+    "mobius sum": "1.0367925707250834",
+    "sentence": "it is a kickass , dense sci-fi action thriller hybrid that delivers and then some .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 40,
+    "max interaction set": [
+        2,
+        3
+    ]
+}

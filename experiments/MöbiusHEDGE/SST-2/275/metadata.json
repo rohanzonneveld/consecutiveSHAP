@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 15:50",
+    "label": "-1",
+    "prediction": "0.998884379863739",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.8985247313976288",
+    "mobius sum": "0.9458774530794472",
+    "sentence": "nicely serves as an examination of a society in transition .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 275,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ]
+}

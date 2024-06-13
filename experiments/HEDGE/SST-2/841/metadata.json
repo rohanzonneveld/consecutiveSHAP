@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:17",
+    "label": "-1",
+    "prediction": "0.9992167949676514",
+    "baseline model": "0.8565012216567993",
+    "sentence": "eight crazy nights is a showcase for sandler 's many talents .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 841,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "runtime": 118
+}

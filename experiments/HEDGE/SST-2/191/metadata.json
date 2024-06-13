@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-10 12:47",
+    "label": "-1",
+    "prediction": "0.5715320706367493",
+    "baseline model": "0.8419315218925476",
+    "sentence": "apparently kissing leads to suicide attempts and tragic deaths .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 191,
+    "max interaction set": [
+        0,
+        1
+    ],
+    "runtime": 51
+}

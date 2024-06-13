@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-07 15:15",
+    "label": "-1",
+    "prediction": "0.9991284012794495",
+    "baseline model": "0.8583206534385681",
+    "sentence": "invincible is a wonderful movie .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 652,
+    "max interaction set": [
+        3,
+        4,
+        5
+    ]
+}

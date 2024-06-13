@@ -1,0 +1,24 @@
+{
+    "time": "2024-06-10 15:38",
+    "label": "-1",
+    "prediction": "0.37236878275871277",
+    "baseline model": "0.8831965327262878",
+    "baseline game": "0.8952850699424744",
+    "mobius sum": "0.360281549859792",
+    "sentence": "i did n't laugh at the ongoing efforts of cube , and his skinny buddy mike epps , to make like laurel and hardy 'n the hood .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 61,
+    "max interaction set": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+    ]
+}

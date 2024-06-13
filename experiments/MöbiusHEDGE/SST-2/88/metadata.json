@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:42",
+    "label": "-1",
+    "prediction": "0.02188701368868351",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.7784363031387329",
+    "mobius sum": "0.099965063855052",
+    "sentence": "characters wander into predictably treacherous situations even though they should know better .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 88,
+    "max interaction set": [
+        3,
+        4,
+        5
+    ]
+}

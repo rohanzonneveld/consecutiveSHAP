@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:50",
+    "label": "-1",
+    "prediction": "0.0024618194438517094",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.8373901844024658",
+    "mobius sum": "0.010583825409412384",
+    "sentence": "after that , it just gets stupid and maudlin .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 277,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

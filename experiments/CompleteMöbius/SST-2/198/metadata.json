@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:58",
+    "label": "-1",
+    "prediction": "0.997866690158844",
+    "baseline model": "[0.8561182]",
+    "sentence": "when it 's all wet , blue crush is highly enjoyable .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 198,
+    "nsamples": 256,
+    "runtime": 11
+}

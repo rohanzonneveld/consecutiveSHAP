@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:55",
+    "label": "-1",
+    "prediction": "0.0015614235308021307",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.8265826106071472",
+    "mobius sum": "0.031094292178750038",
+    "sentence": "i just did n't care as much for the story .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 380,
+    "max interaction set": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

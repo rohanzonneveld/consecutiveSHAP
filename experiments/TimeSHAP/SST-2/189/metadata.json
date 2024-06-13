@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:23",
+    "label": "-1",
+    "prediction": "0.9991069436073303",
+    "baseline model": "[0.85650122]",
+    "sentence": "it has the courage to wonder about big questions with sincerity and devotion .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 189
+}

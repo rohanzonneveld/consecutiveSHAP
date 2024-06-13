@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:57",
+    "label": "-1",
+    "prediction": "0.9989338517189026",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.806600958108902",
+    "mobius sum": "1.048438124009408",
+    "sentence": "a thoughtful look at a painful incident that made headlines in 1995 .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 479,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:07",
+    "label": "-1",
+    "prediction": "0.997572124004364",
+    "baseline model": "[0.84730357]",
+    "sentence": "but he somehow pulls it off .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 391,
+    "nsamples": 256,
+    "runtime": 5
+}

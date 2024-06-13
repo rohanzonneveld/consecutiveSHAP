@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 11:50",
+    "label": "-1",
+    "prediction": "0.00017733394633978605",
+    "baseline model": "0.8419315218925476",
+    "sentence": "nothing more than a mediocre trifle .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 32,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ],
+    "runtime": 68
+}

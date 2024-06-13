@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 14:40",
+    "label": "-1",
+    "prediction": "0.9990777969360352",
+    "baseline model": "0.8419315218925476",
+    "sentence": "an impressive if flawed effort that indicates real talent .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 672,
+    "max interaction set": [
+        1,
+        2,
+        3
+    ],
+    "runtime": 39
+}

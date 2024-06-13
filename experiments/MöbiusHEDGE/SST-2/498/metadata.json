@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:58",
+    "label": "-1",
+    "prediction": "0.9992545247077942",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8580962121486664",
+    "mobius sum": "1.0026640119031072",
+    "sentence": "this is the best american movie about troubled teens since 1998 's whatever .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 498,
+    "max interaction set": [
+        11,
+        12,
+        13
+    ]
+}

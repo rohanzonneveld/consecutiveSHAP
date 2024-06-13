@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:34",
+    "label": "-1",
+    "prediction": "0.9969294667243958",
+    "baseline model": "0.8797289729118347",
+    "baseline game": "0.9126703888177872",
+    "mobius sum": "0.9639873011037707",
+    "sentence": "not too far below the gloss you can still feel director denis villeneuve 's beating heart and the fondness he has for his characters .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 45,
+    "max interaction set": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+    ]
+}

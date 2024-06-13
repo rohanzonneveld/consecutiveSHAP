@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 14:58",
+    "label": "-1",
+    "prediction": "0.999025821685791",
+    "baseline model": "0.8565012216567993",
+    "sentence": "offers a breath of the fresh air of true sophistication .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 768,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "runtime": 110
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:28",
+    "label": "-1",
+    "prediction": "0.00014427321730181575",
+    "baseline model": "[0.83926523]",
+    "sentence": "it 's an awfully derivative story .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 381
+}

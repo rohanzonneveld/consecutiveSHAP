@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 16:50",
+    "label": "-1",
+    "prediction": "0.9990099668502808",
+    "baseline model": "[0.84473026]",
+    "sentence": "a clever blend of fact and fiction .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 54,
+    "nsamples": 256,
+    "runtime": 10
+}

@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 13:29",
+    "label": "-1",
+    "prediction": "0.999164342880249",
+    "baseline model": "0.8561182022094727",
+    "sentence": "a film that is a portrait of grace in an imperfect world .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 318,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ],
+    "runtime": 79
+}

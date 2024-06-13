@@ -1,0 +1,25 @@
+{
+    "time": "2024-06-10 13:12",
+    "label": "-1",
+    "prediction": "0.15569476783275604",
+    "baseline model": "0.8615084886550903",
+    "sentence": "a bowel-curdling , heart-stopping recipe for terror .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 274,
+    "max interaction set": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ],
+    "runtime": 165
+}

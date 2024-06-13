@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:59",
+    "label": "-1",
+    "prediction": "0.0007579872035421431",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.8628258109092712",
+    "mobius sum": "-0.005958763882517815",
+    "sentence": "i regret to report that these ops are just not extreme enough .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 531,
+    "max interaction set": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

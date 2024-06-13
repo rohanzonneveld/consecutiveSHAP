@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-12 16:57",
+    "label": "-1",
+    "prediction": "0.9988515377044678",
+    "baseline model": "0.847303569316864",
+    "baseline game": "0.9084110260009766",
+    "mobius sum": "0.9377440642565489",
+    "sentence": "it never fails to engage us .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 1004,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ]
+}

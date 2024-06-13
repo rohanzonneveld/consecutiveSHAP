@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:29",
+    "label": "-1",
+    "prediction": "0.36563217639923096",
+    "baseline model": "[0.84473026]",
+    "sentence": "this is how you use special effects .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 443
+}

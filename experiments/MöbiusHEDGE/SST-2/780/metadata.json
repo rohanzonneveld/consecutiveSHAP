@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 16:05",
+    "label": "-1",
+    "prediction": "0.9989233613014221",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.7158493250608444",
+    "mobius sum": "1.1285804971121252",
+    "sentence": "jir\u00ed hubac 's script is a gem .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 780,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ]
+}

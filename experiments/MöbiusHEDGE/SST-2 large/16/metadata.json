@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:27",
+    "label": "-1",
+    "prediction": "0.9990308284759521",
+    "baseline model": "0.8879610300064087",
+    "baseline game": "0.9291070476174355",
+    "mobius sum": "0.9578847358934581",
+    "sentence": "a journey through memory , a celebration of living , and a sobering rumination on fatality , classism , and ignorance .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 16,
+    "max interaction set": [
+        13,
+        14
+    ]
+}

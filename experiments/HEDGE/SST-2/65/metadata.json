@@ -1,0 +1,16 @@
+{
+    "time": "2024-06-10 12:00",
+    "label": "-1",
+    "prediction": "0.9981971383094788",
+    "baseline model": "0.8489168882369995",
+    "sentence": "jacquot 's tosca is a treat .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 65,
+    "max interaction set": [
+        10,
+        11
+    ],
+    "runtime": 129
+}

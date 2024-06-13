@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:50",
+    "label": "-1",
+    "prediction": "0.999161958694458",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.7637647986412048",
+    "mobius sum": "1.0969020179472864",
+    "sentence": "engagingly captures the maddening and magnetic ebb and flow of friendship .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 279,
+    "max interaction set": [
+        0,
+        1
+    ]
+}

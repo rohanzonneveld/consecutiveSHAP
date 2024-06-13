@@ -1,0 +1,25 @@
+{
+    "time": "2024-06-10 16:04",
+    "label": "-1",
+    "prediction": "0.5689106583595276",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.7592875957489014",
+    "mobius sum": "0.6711187828332186",
+    "sentence": "in its ragged , cheap and unassuming way , the movie works .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 731,
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+    ]
+}

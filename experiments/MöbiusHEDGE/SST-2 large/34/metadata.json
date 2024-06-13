@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:31",
+    "label": "-1",
+    "prediction": "0.00020925146236550063",
+    "baseline model": "0.8796850442886353",
+    "baseline game": "0.9553602337837219",
+    "mobius sum": "-0.07546727638691664",
+    "sentence": "gangs of new york is an unapologetic mess , whose only saving grace is that it ends by blowing just about everything up .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 34,
+    "max interaction set": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+    ]
+}

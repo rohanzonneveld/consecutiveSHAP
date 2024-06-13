@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-07 15:17",
+    "label": "-1",
+    "prediction": "0.001947858021594584",
+    "baseline model": "0.8447302579879761",
+    "sentence": "gee , a second assassin shot kennedy ?",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 684,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ]
+}

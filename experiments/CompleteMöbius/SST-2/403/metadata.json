@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:08",
+    "label": "-1",
+    "prediction": "0.9990323781967163",
+    "baseline model": "[0.84193152]",
+    "sentence": "an engaging overview of johnson 's eccentric career .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 403,
+    "nsamples": 256,
+    "runtime": 10
+}

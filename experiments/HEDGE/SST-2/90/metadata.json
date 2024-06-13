@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 12:07",
+    "label": "-1",
+    "prediction": "0.9988622665405273",
+    "baseline model": "0.8489168882369995",
+    "sentence": "gloriously goofy ( and gory ) midnight movie stuff .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 90,
+    "max interaction set": [
+        8,
+        9,
+        10
+    ],
+    "runtime": 93
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:32",
+    "label": "-1",
+    "prediction": "0.00051413185428828",
+    "baseline model": "[0.85650122]",
+    "sentence": "wait for video -- and then do n't rent it .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 472
+}

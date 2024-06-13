@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:21",
+    "label": "-1",
+    "prediction": "0.03734250366687775",
+    "baseline model": "[0.84473026]",
+    "sentence": "too close to phantom menace for comfort .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 751,
+    "nsamples": 256,
+    "runtime": 10
+}

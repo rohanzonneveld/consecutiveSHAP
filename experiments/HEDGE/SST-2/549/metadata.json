@@ -1,0 +1,15 @@
+{
+    "time": "2024-06-07 15:14",
+    "label": "-1",
+    "prediction": "0.7518099546432495",
+    "baseline model": "0.8392652273178101",
+    "sentence": "the issue of faith is not explored very deeply",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 549,
+    "max interaction set": [
+        7,
+        8
+    ]
+}

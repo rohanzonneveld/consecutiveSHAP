@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:34",
+    "label": "-1",
+    "prediction": "0.0035327018704265356",
+    "baseline model": "[0.83926523]",
+    "sentence": "the stories here suffer from the chosen format .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 830
+}

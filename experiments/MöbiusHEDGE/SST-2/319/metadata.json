@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 15:52",
+    "label": "-1",
+    "prediction": "0.01792874187231064",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.9192652106285095",
+    "mobius sum": "-0.05241953022778034",
+    "sentence": "i do n't have an i am sam clue .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 319,
+    "max interaction set": [
+        4,
+        5,
+        6,
+        7
+    ]
+}

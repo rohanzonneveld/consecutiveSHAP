@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 15:53",
+    "label": "-1",
+    "prediction": "0.0038976429495960474",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.9247645139694214",
+    "mobius sum": "-0.05937960371375084",
+    "sentence": "let 's cut to the consumer-advice bottom line : stay home .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 334,
+    "max interaction set": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:05",
+    "label": "-1",
+    "prediction": "0.9989771842956543",
+    "baseline model": "[0.84473026]",
+    "sentence": "but what spectacular sizzle it is !",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 347,
+    "nsamples": 256,
+    "runtime": 10
+}

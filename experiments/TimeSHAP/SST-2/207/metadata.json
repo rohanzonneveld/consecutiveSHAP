@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:24",
+    "label": "-1",
+    "prediction": "0.9992353916168213",
+    "baseline model": "[0.84891689]",
+    "sentence": "a resonant tale of racism , revenge and retribution .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 207
+}

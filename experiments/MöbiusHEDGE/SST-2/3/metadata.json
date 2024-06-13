@@ -1,0 +1,27 @@
+{
+    "time": "2024-06-10 15:24",
+    "label": "-1",
+    "prediction": "0.9940576553344727",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.782374769449234",
+    "mobius sum": "1.0677987895905972",
+    "sentence": "director rob marshall went out gunning to make a great one .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 3,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

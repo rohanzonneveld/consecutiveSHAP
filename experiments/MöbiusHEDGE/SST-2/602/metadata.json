@@ -1,0 +1,23 @@
+{
+    "time": "2024-06-10 16:00",
+    "label": "-1",
+    "prediction": "0.9567274451255798",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8472434282302856",
+    "mobius sum": "0.9584002215415239",
+    "sentence": "a well acted and well intentioned snoozer .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 602,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ]
+}

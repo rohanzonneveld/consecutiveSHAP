@@ -1,0 +1,27 @@
+{
+    "time": "2024-06-10 15:56",
+    "label": "-1",
+    "prediction": "0.7556095123291016",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.9550823792815208",
+    "mobius sum": "0.6566459182649851",
+    "sentence": "like a south-of-the-border melrose place .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 437,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 13:16",
+    "label": "-1",
+    "prediction": "0.999161958694458",
+    "baseline model": "0.8615084886550903",
+    "sentence": "engagingly captures the maddening and magnetic ebb and flow of friendship .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 279,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "runtime": 132
+}

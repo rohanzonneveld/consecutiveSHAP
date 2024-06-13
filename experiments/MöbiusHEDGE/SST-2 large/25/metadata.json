@@ -1,0 +1,33 @@
+{
+    "time": "2024-06-10 15:29",
+    "label": "-1",
+    "prediction": "0.002296106657013297",
+    "baseline model": "0.8918254971504211",
+    "baseline game": "0.921230137348175",
+    "mobius sum": "-0.02711695432662964",
+    "sentence": "starts off with a bang , but then fizzles like a wet stick of dynamite at the very end .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 25,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ]
+}

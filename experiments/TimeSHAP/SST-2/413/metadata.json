@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:29",
+    "label": "-1",
+    "prediction": "0.9991123080253601",
+    "baseline model": "[0.84730357]",
+    "sentence": "a taut , intelligent psychological drama .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 413
+}

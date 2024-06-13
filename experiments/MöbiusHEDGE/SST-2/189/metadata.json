@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:46",
+    "label": "-1",
+    "prediction": "0.9991069436073303",
+    "baseline model": "0.8565012216567993",
+    "baseline game": "0.8831385597586632",
+    "mobius sum": "0.9724734239280224",
+    "sentence": "it has the courage to wonder about big questions with sincerity and devotion .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 189,
+    "max interaction set": [
+        1,
+        2,
+        3
+    ]
+}

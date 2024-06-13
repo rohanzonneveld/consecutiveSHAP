@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:13",
+    "label": "-1",
+    "prediction": "0.998831570148468",
+    "baseline model": "[0.8561182]",
+    "sentence": "a feel-good picture in the best sense of the term .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 21
+}

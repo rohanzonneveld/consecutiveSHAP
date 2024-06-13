@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:56",
+    "label": "-1",
+    "prediction": "0.0018217152683064342",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.7179464101791382",
+    "mobius sum": "0.125811698846519",
+    "sentence": "disturbingly superficial in its approach to the material .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 424,
+    "max interaction set": [
+        1,
+        2
+    ]
+}

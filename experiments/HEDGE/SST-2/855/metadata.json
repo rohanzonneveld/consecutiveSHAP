@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 15:22",
+    "label": "-1",
+    "prediction": "0.9992276430130005",
+    "baseline model": "0.8565012216567993",
+    "sentence": "gosling provides an amazing performance that dwarfs everything else in the film .",
+    "model": "SST-2",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 855,
+    "max interaction set": [
+        8,
+        9,
+        10,
+        11,
+        12
+    ],
+    "runtime": 88
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:19",
+    "label": "-1",
+    "prediction": "0.997509241104126",
+    "baseline model": "[0.70472628]",
+    "sentence": "good actress .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 705,
+    "nsamples": 256,
+    "runtime": 0
+}

@@ -1,0 +1,28 @@
+{
+    "time": "2024-06-10 16:02",
+    "label": "-1",
+    "prediction": "0.00013181679241824895",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.9469539523124695",
+    "mobius sum": "-0.08532234840095043",
+    "sentence": "bullock 's complete lack of focus and ability quickly derails the film",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 666,
+    "max interaction set": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 15:30",
+    "label": "-1",
+    "prediction": "0.0005074476357549429",
+    "baseline model": "0.8909936547279358",
+    "baseline game": "0.9132620692253113",
+    "mobius sum": "-0.02176044136285782",
+    "sentence": "so few movies explore religion that it 's disappointing to see one reduce it to an idea that fits in a sampler .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 31,
+    "max interaction set": [
+        21,
+        22,
+        23
+    ]
+}

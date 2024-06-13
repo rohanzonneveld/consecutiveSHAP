@@ -1,0 +1,19 @@
+{
+    "time": "2024-06-10 15:47",
+    "label": "-1",
+    "prediction": "0.002847145078703761",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8803542256355286",
+    "mobius sum": "-0.028588466346263885",
+    "sentence": "the whole damn thing is ripe for the jerry springer crowd .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 195,
+    "max interaction set": [
+        8,
+        9,
+        10,
+        11
+    ]
+}

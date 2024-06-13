@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:30",
+    "label": "-1",
+    "prediction": "0.0002368869463680312",
+    "baseline model": "[0.84730357]",
+    "sentence": "first good , then bothersome .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 502
+}

@@ -1,0 +1,13 @@
+{
+    "time": "2024-06-10 17:22",
+    "label": "-1",
+    "prediction": "0.00026749176322482526",
+    "baseline model": "[0.86150849]",
+    "sentence": "this is n't a `` friday '' worth waiting for .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 781,
+    "nsamples": 256,
+    "runtime": 12
+}

@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:19",
+    "label": "-1",
+    "prediction": "0.02188701368868351",
+    "baseline model": "[0.85650122]",
+    "sentence": "characters wander into predictably treacherous situations even though they should know better .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 88
+}

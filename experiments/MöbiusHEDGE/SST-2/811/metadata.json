@@ -1,0 +1,18 @@
+{
+    "time": "2024-06-10 16:06",
+    "label": "-1",
+    "prediction": "0.0003976027655880898",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8453037142753601",
+    "mobius sum": "0.004011018201708794",
+    "sentence": "there is not an ounce of honesty in the entire production .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 811,
+    "max interaction set": [
+        8,
+        9,
+        10
+    ]
+}

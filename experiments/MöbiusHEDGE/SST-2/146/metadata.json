@@ -1,0 +1,29 @@
+{
+    "time": "2024-06-10 15:44",
+    "label": "-1",
+    "prediction": "0.17264196276664734",
+    "baseline model": "0.8615084886550903",
+    "baseline game": "0.8972139358520508",
+    "mobius sum": "0.1369307953864336",
+    "sentence": "sometimes , nothing satisfies like old-fashioned swashbuckling .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 146,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+    ]
+}

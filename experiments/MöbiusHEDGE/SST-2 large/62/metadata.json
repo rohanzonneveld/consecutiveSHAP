@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:38",
+    "label": "-1",
+    "prediction": "0.9960527420043945",
+    "baseline model": "0.8910349011421204",
+    "baseline game": "0.9163902401924133",
+    "mobius sum": "0.970697570941411",
+    "sentence": "with danilo donati 's witty designs and dante spinotti 's luscious cinematography , this might have made a decent children 's movie -- if only benigni had n't insisted on casting himself in the title role .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 62,
+    "max interaction set": [
+        6,
+        7
+    ]
+}

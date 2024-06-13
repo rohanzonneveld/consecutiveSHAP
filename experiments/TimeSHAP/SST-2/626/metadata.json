@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:36",
+    "label": "-1",
+    "prediction": "0.9987379908561707",
+    "baseline model": "[0.84891689]",
+    "sentence": "majidi gets uniformly engaging performances from his largely amateur cast .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 626
+}

@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:45",
+    "label": "-1",
+    "prediction": "0.9990465044975281",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.826290100812912",
+    "mobius sum": "1.014678692445159",
+    "sentence": "an elegant , exquisitely modulated psychological thriller .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 168,
+    "max interaction set": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}

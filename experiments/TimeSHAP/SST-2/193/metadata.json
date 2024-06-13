@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-10 16:23",
+    "label": "-1",
+    "prediction": "0.04202613607048988",
+    "baseline model": "[0.8561182]",
+    "sentence": "do n't let your festive spirit go this far .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 193
+}

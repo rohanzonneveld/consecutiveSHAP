@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 15:51",
+    "label": "-1",
+    "prediction": "0.0001529155415482819",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.5989196300506592",
+    "mobius sum": "0.24308720789849758",
+    "sentence": "now it 's a bad , embarrassing movie .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 292,
+    "max interaction set": [
+        5,
+        6
+    ]
+}

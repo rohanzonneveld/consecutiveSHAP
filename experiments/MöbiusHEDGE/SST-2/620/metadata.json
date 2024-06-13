@@ -1,0 +1,20 @@
+{
+    "time": "2024-06-10 16:00",
+    "label": "-1",
+    "prediction": "0.0006032484234310687",
+    "baseline model": "0.8419315218925476",
+    "baseline game": "0.8588830232620239",
+    "mobius sum": "-0.016333220526576042",
+    "sentence": "demme 's loose approach kills the suspense .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 620,
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}

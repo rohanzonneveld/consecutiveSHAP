@@ -1,0 +1,11 @@
+{
+    "time": "2024-06-07 15:24",
+    "label": "-1",
+    "prediction": "0.999091386795044",
+    "baseline model": "[0.83926523]",
+    "sentence": "sensitive , insightful and beautifully rendered film .",
+    "model": "BERT",
+    "dataset": "SST-2",
+    "mask_token": "[MASK]",
+    "sentence tag": 43
+}

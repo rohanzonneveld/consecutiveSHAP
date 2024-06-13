@@ -1,0 +1,17 @@
+{
+    "time": "2024-06-10 16:05",
+    "label": "-1",
+    "prediction": "0.01024559885263443",
+    "baseline model": "0.8455174565315247",
+    "baseline game": "0.7501035332679749",
+    "mobius sum": "0.1056404965929687",
+    "sentence": "better at putting you to sleep than a sound machine .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 778,
+    "max interaction set": [
+        6,
+        7
+    ]
+}

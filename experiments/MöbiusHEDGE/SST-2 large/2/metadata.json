@@ -1,0 +1,31 @@
+{
+    "time": "2024-06-10 15:24",
+    "label": "-1",
+    "prediction": "0.864593505859375",
+    "baseline model": "0.8918254971504211",
+    "baseline game": "0.8958436734974384",
+    "mobius sum": "0.8605660023167729",
+    "sentence": "by the end of no such thing the audience , like beatrice , has a watchful affection for the monster .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 2,
+    "max interaction set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+    ]
+}

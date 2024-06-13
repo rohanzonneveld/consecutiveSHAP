@@ -1,0 +1,22 @@
+{
+    "time": "2024-06-10 15:59",
+    "label": "-1",
+    "prediction": "0.0020411652512848377",
+    "baseline model": "0.8489168882369995",
+    "baseline game": "0.8570396900177002",
+    "mobius sum": "-0.006082094740122557",
+    "sentence": "lacks heart , depth and , most of all , purpose .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 551,
+    "max interaction set": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ]
+}

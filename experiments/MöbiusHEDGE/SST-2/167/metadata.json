@@ -1,0 +1,21 @@
+{
+    "time": "2024-06-10 15:45",
+    "label": "-1",
+    "prediction": "0.975526750087738",
+    "baseline model": "0.8561182022094727",
+    "baseline game": "0.7096898853778839",
+    "mobius sum": "1.1219528838992119",
+    "sentence": "a deviant topical comedy which is funny from start to finish .",
+    "model": "BERT",
+    "dataset": "IMDB",
+    "mask_token": "[MASK]",
+    "sentence tag": 167,
+    "max interaction set": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
+}
